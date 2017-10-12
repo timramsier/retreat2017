@@ -1,0 +1,45 @@
+.btn-holiday { 
+  color: #928C87; 
+  background-color: #FFFFFF; 
+  border-color: #928C87; 
+} 
+ 
+.btn-holiday:hover, 
+.btn-holiday:focus, 
+.btn-holiday:active, 
+.btn-holiday.active, 
+.open .dropdown-toggle.btn-holiday { 
+  color: #928C87; 
+  background-color: #E8E1DC; 
+  border-color: #928C87; 
+} 
+ 
+.btn-holiday:active, 
+.btn-holiday.active, 
+.open .dropdown-toggle.btn-holiday { 
+  background-image: none; 
+} 
+ 
+.btn-holiday.disabled, 
+.btn-holiday[disabled], 
+fieldset[disabled] .btn-holiday, 
+.btn-holiday.disabled:hover, 
+.btn-holiday[disabled]:hover, 
+fieldset[disabled] .btn-holiday:hover, 
+.btn-holiday.disabled:focus, 
+.btn-holiday[disabled]:focus, 
+fieldset[disabled] .btn-holiday:focus, 
+.btn-holiday.disabled:active, 
+.btn-holiday[disabled]:active, 
+fieldset[disabled] .btn-holiday:active, 
+.btn-holiday.disabled.active, 
+.btn-holiday[disabled].active, 
+fieldset[disabled] .btn-holiday.active { 
+  background-color: #FFFFFF; 
+  border-color: #928C87; 
+} 
+ 
+.btn-holiday .badge { 
+  color: #FFFFFF; 
+  background-color: #928C87; 
+}

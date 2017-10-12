@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700');
+*{
+	font-family: 'Open Sans', Helvetica, Arial;
+}
+
+form{
+	font-size:12px;
+}
+
+form label{
+	font-weight: 400;
+}
+
+form input{
+	font-weight: 300;
+}
+form label small{
+	color:#999;
+}
+
+span.glyphicon.glyphicon-ok{
+	font-size: 50px;
+	color:#33cc33;
+}
+
+span.glyphicon.glyphicon-info-sign{
+	font-size: 50px;
+	color:#ffb84d;
+}
+
+span.glyphicon.glyphicon-warning-sign{
+	font-size: 50px;
+	color:#cc0000;
+}
+hr.default{
+	border:0;
+	height: 1px;
+	background: #bbb;
+	background-image: linear-gradient(to right, #ccc, #bbb, #ccc);
+}
+hr.activities{
+	border:0;
+	height: 1px;
+	background: #bbb;
+	background-image: linear-gradient(to right, #ccc, #bbb, #ccc);
+	margin: 15px 0;
+}
+
+p.success-text{
+	padding:0 50px 50px 50px;
+	font-size: 14px;
+	font-weight: 300;
+}
+
+.input-group .form-control:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.input-group .form-control:last-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+select.has-error {
+    border-color: #a94442;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+
+p.text-column-2{
+	-webkit-column-count: 2; /* Chrome, Safari, Opera */
+	-moz-column-count:    2; /* Firefox */
+	column-count:         2;
+  -webkit-column-gap:   20px; /* Chrome, Safari, Opera */ 
+	-moz-column-gap:      20px; /* Firefox */
+	column-gap:           20px;
+	text-align: justify; /* Optional */
+}
+
+#questionaire .activityDescription p{
+	font-size: 14px;
+	font-weight: 300;
+	/*margin-bottom: 30px;*/
+}
+#questionaire .activityInputs h2{
+	margin-bottom: 30px;
+}
+
+.panel-default{
+	background-color: rgba(255,255,255,.85);
+}
+
+.logo{
+	padding: 25px 15px;
+}
+
+.gutter-erase{
+	margin:0;
+	padding:0;
+}
+.thin-text{
+	font-weight: 300;
+}
+
+
+.overlay{
+	z-index: -1;
+	background-size: cover;
+	background-position: center;
+	background-repeat:no-repeat;
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	height:100%;
+	position: fixed;
+}
+#user-info>div{
+	padding-top:15px;
+}
+#user-info>div:nth-child(even){
+	font-weight: 300;
+}
+#user-info>div:nth-child(odd){
+	font-weight: 700;
+}
+
+#matte{
+	z-index: -1;
+	background-color: #002b5e;
+	z-index: -1;
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	height:100%;
+	position: fixed;
+}
+
+#mainHeaderTextOverride, 
+#mainHeaderSubtextOverride,
+#notificationTextOverride {
+	display:none;
+}
+
+#accessForm{
+	display:block;
+	padding-bottom:50px;
+}
+
+#attending-links{
+margin-top: 50px;
+text-align: center;
+margin-bottom: 100px;
+}
+
+#welcome .deadline{
+	color:#444;
+	font-size: 12px;
+	border-radius: 5px;
+	background: rgba(255,255,255,.6);
+	display:inline-block;
+	padding:5px;
+}
+
+#questionaire{
+	padding:15px;
+}
+
+#questionaire .notification{
+	font-weight: 300;
+	font-size: 1em;
+	margin-bottom: 30px;
+}
+#questionaire h2{
+	margin-top: 5px;
+	font-size: 2em;
+	font-weight: 300;
+}
+#questionaire h3{
+	margin: 0 0 20px 0;
+	font-size: 1.25em;
+}
+
+#questionaire.padding-bottom{
+	padding-bottom: 50px;
+}
+
+#main-background{
+	z-index: -1;
+	background-size: cover;
+	background-position: center;
+	background-repeat:no-repeat;
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	height:100%;
+	position: fixed;
+}
+
+#welcome{
+	color:#fff;
+	margin: 0 0 15px 0;
+	font-size: 16px;
+
+}
+
+#welcome h1{
+	font-weight: 300;
+	font-size: 2.25em;
+}
+
+#welcome h1 strong{
+	font-weight: 500;
+}
+
+#form-buttons{
+	padding:15px;
+	text-align: right;
+}
+
+#form-section{
+	float:right;
+	font-size:1.5em;
+	text-align: right;
+	color:#afafaf;
+}
+
+#master-container{
+	padding:0;
+}
+
+#private-note{
+	margin-top:15px;
+	font-size: 10px;
+}
+
+#origin-note{
+	font-size: 10px;
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+	p.success-text{font-size: 16px;}
+	#private-note{
+		margin-top:0px;
+	}
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+
+/* 768px and under */
+@media (max-width: 768px) {
+	.logo img{
+		max-width: 300px;
+	}
+}

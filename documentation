@@ -1,0 +1,69 @@
+
+-------------------------------------------------------------------------------------------
+Override Documentation
+-------------------------------------------------------------------------------------------
+
+	Override grants ability to change the page text and visuals by using an "override" file 
+	that that is located in the app/overrides directory.  The files can be used by including 
+	the override URL variable (e.g. survey.iacpublishing.com/?override=holiday) or by 
+	initiating the $override variable within the form (e.g. $override = "holiday";).
+
+	Things you can override
+
+	* backgroundImageOverride
+	* mainHeaderTextOverride
+	* mainHeaderSubtextOverride
+	* notificationTextOverride
+	* headerOverride
+
+	____________________________________________
+	backgroundImageOverride 
+
+	Usage:
+
+		<a class="backgroundImageOverride" href="path/to/image"></a>
+
+
+	Place this in the override file to change the default image displayed when using the
+	override file.
+
+	____________________________________________
+	mainHeaderTextOverride
+
+	Usage:
+
+		<div id="mainHeaderTextOverride">Enter custom HTML here...</div>
+
+
+	Place this in the override file to change the default text/HTML displayed in the top/main portion
+	of the header within the survey/form.
+
+	____________________________________________
+	mainHeaderSubtextOverride
+
+	Usage:
+
+		<div id="mainHeaderSubtextOverride">Enter custom HTML here...</div>
+
+	Place this in the override file to change the default text/HTML displayed in the lower/subtext
+	portion	of the header within the survey/form.
+
+	____________________________________________
+	notificationTextOverride
+
+	Usage:
+
+		<div id="notificationTextOverride">Enter custom HTML here...</div>
+
+	Place this in the override file to change the default text/HTML displayed in the notification
+	portion	of the form.  This text is located above the line break in the form.
+
+	____________________________________________
+	headerOverride
+
+	Usage:
+
+		<div class="headerOverride" style="Enter Custom CSS here"></div>
+
+		Place this to override the styling of the Header section.  Note: this may cause unplanned
+		changes to text within the file if you modify font styles at this level.
