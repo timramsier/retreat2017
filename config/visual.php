@@ -17,7 +17,7 @@
 // ============================= Main Settings ====================================
 
 // this sets the main static background image of the page
-$mainBackground = $PATH["IMG"]."grapes.jpg";
+$mainBackground = $PATH["IMG"]."grapes_mod.jpg";
 
 
 
