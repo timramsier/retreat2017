@@ -9,7 +9,7 @@
       
     </div>
 
-    <h2><center>Do you plan on attending the IAC Executive Retreat?</center></h2>
+    <h2><center>Do you plan on attending the IAC Annual Planning Meeting?</center></h2>
 
     <div id="attending-links">
       <a class='btn btn-primary btn-lg' href=".?view=form&type=attending">Yes</a>
