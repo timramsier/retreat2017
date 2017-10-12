@@ -17,7 +17,7 @@
 // ============================= Main Settings ====================================
 
 // this sets the main static background image of the page
-$mainBackground = $PATH["IMG"]."aspen_01.jpg";
+$mainBackground = $PATH["IMG"]."grapes.jpg";
 
 
 
@@ -32,10 +32,10 @@ $mainBackground = $PATH["IMG"]."aspen_01.jpg";
 $headerLogo 		= $PATH["IMG"]."IAC_white.png";
 
 // this sets the Header main text on all the pages
-$headerMainText = "Welcome to the <strong>IAC</strong> Executive Retreat Registration Questionnaire.";
+$headerMainText = "Welcome to the <strong>IAC</strong> Annual Planning Meeting Questionnaire.";
 
 // this sets the subtext under the Header on all pages
-$headerSubText 	= "Come join the rest of the Executive Team in Aspen, CO!";
+$headerSubText 	= "Come join the rest of the Executive Team in Napa, California!";
 
 
 
@@ -47,7 +47,7 @@ $headerSubText 	= "Come join the rest of the Executive Team in Aspen, CO!";
 // ================================ Form Text =====================================
 
 // this sets the form text at the top of the form
-$formText 			= "The registration deadline Friday, November 18 at 4:00 pm (ET)";
+$formText 			= "The registration deadline Friday, October 27 at 4:00 pm (ET)";
 
 
 
