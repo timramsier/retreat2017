@@ -1,5 +1,4 @@
 <?php
-
 $queryList = array(
   "main"=>"SELECT 'Access Key','Attending','First Name','Last Name','Company','Title','Email','Address 1','Address 2','City','State','Zip',
             'Office Phone','Mobile Phone','EA Name','EA Email','EA Office Phone','EA Mobile Phone','Emergency Contact Name',
@@ -13,8 +12,4 @@ $queryList = array(
             emergencyPhone,foodDiet,specialNeeds,jacketSize,flightType,arrivalDate,
             arrivalAirport,arrivalFlightNum,arrivalAirline,originCity,arrivalConnectionInfo,departureDate,
             departureAirport,departureFlightNum,departureAirline,destinationCity,departureConnectionInfo
-            FROM data
-            INTO OUTFILE '/var/lib/mysql-files/IACRetreatOutput.temp.csv' 
-            FIELDS TERMINATED BY ','' 
-            ENCLOSED BY '\"' 
-            LINES TERMINATED BY '\n';");
+            FROM data;");
