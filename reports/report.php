@@ -6,7 +6,7 @@
 	$result = $mysqli->query($query);
 	// $array = $result->fetch_assoc();
 
-	echo "<table>";
+	echo "<table class='report-table'>";
 	while ($row = $result->fetch_assoc()) {
     echo '<tr>';
     foreach ($row as $value)
@@ -16,10 +16,9 @@
     echo "</tr>";
 	}
 	echo "</table>";
-	// $result = $data_array->fetch_assoc();
-// echo "this is working";
-// echo "<pre>";
-// print_r($result);
-// print_r($array);
-// echo "</pre>";
-// die();
+?>
+<style>
+	.report-table tr:first-of-type {
+		font-weight: 600;
+	}
+</style>
