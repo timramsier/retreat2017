@@ -1,0 +1,26 @@
+.report-table {
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  width:100%;
+  border-collapse: collapse;
+}
+
+.report-table tr:first-of-type {
+  font-weight: 600;
+  background-color: #212ba2;
+  color: #b2b9fe;
+}
+
+td {
+  width:1%;
+  white-space:nowrap;
+  padding: 2px 5px;
+}
+
+tr:nth-child(odd) {
+  background-color: #b2b9fe;
+}
+
+.report-table td:last-child {
+  border-bottom: solid #040b6c;
+}
