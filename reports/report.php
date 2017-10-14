@@ -5,7 +5,6 @@
 
 	$query = $queryList['main'];
 	$result = $mysqli->query($query);
-	// $array = $result->fetch_assoc();
 ?>
 
 <link rel="stylesheet" type="text/css" href="../public/css/table.css" ?>

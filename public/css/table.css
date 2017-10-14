@@ -7,20 +7,20 @@
 
 .report-table tr:first-of-type {
   font-weight: 600;
-  background-color: #212ba2;
-  color: #b2b9fe;
+  background-color: #343eb7;
+  color: #fff;
 }
 
 td {
   width:1%;
   white-space:nowrap;
-  padding: 2px 5px;
+  padding: 5px;
 }
 
 tr:nth-child(odd) {
-  background-color: #b2b9fe;
+  background-color: #e6e8ff;
 }
 
-.report-table td:last-child {
-  border-bottom: solid #040b6c;
+.report-table tr:last-child {
+  border-bottom: solid 1px #040b6c;
 }
