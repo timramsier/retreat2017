@@ -11,7 +11,9 @@
   align-items: stretch;
   width: 100%;
 }
-
+.tile i {
+  opacity: 0.1;
+}
 .tile {
   text-decoration: none;
   margin: 15px;
