@@ -10,13 +10,14 @@
   </head>
   <body>
     <div class="report-menu">
-      <ul>
+      <h1>Reports:</h1>
+      <div class="tiles">
         <?php
           foreach ($queryList as $key => $query) {
-            echo "<li><a href='report.php?data=".$key."'>".$key."</a></li>";
+            echo "<a class='tile' href='report.php?data=".$key."'><h3>".$key."</h3><p>".$descriptionList[$key]."</p></a>";
           }
         ?>
-      </ul>
+      </div>
     </div>
   </body>
 </html>
