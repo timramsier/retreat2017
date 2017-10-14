@@ -11,6 +11,9 @@
   align-items: stretch;
   width: 100%;
 }
+.icon {
+  text-align: right;
+}
 .tile i {
   opacity: 0.1;
 }
