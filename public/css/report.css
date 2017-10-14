@@ -1,0 +1,20 @@
+.report-menu {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.report-menu ul {
+  list-style: none;
+}
+
+.report-menu ul li a {
+  border: solid 1px #040b6c;
+  border-radius: 5px;
+  margin: 15px 0px;
+  padding: 10px;
+  color: #040b6c;
+  text-decoration: none;
+}
+
+.report-menu ul li a:hover {
+  background: #e6e8ff;
+}

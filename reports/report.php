@@ -6,14 +6,20 @@
 	$query = $queryList['main'];
 	$result = $mysqli->query($query);
 ?>
-
-<link rel="stylesheet" type="text/css" href="../public/css/table.css" ?>
-<table class='report-table'>
-	<?php while ($row = $result->fetch_assoc()) { ?>
-		<tr>
-			<?php foreach ($row as $value) { ?>
-				<td><?=$value ?></td>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../public/css/table.css" ?>
+	</head>
+	<body>
+		<table class='report-table'>
+			<?php while ($row = $result->fetch_assoc()) { ?>
+				<tr>
+					<?php foreach ($row as $value) { ?>
+						<td><?=$value ?></td>
+					<?php } ?>
+				</tr>
 			<?php } ?>
-		</tr>
-	<?php } ?>
-</table>
+		</table>
+	</body>
+</html>
+
