@@ -14,7 +14,7 @@
       <div class="tiles">
         <?php
           foreach ($queryList as $key => $query) {
-            echo "<a class='tile' href='report.php?data=".$key."'><h3>".$key."</h3><p>".$descriptionList[$key]."</p></a>";
+            echo "<a class='tile' href='report.php?data=".$key."'><h2>".$key."</h2><p>".$descriptionList[$key]."</p></a>";
           }
         ?>
       </div>

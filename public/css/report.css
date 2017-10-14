@@ -21,13 +21,13 @@
   border: solid 1px #040b6c;
   color: #040b6c;
   padding: 10px;
-}
-.tile p {
-  color: #202991;
-  font-size: .8em;
   -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
   box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+}
+.tile p {
+  color: #202991;
+  font-size: 1.1em;
 }
 
 .tile:hover {
