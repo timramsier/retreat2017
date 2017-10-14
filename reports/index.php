@@ -17,7 +17,7 @@
           foreach ($queryList as $key => $query) {
             echo "<a class='tile' href='report.php?data="
             .$key.
-            "'><center><i class='fa fa-3 fa-th-list' aria-hidden='true'></i></center><h2>"
+            "'><center><i class='fa fa-3x fa-th-list' aria-hidden='true'></i></center><h2>"
             .$key.
             "</h2><p>"
             .$descriptionList[$key].
