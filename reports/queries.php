@@ -12,23 +12,9 @@ $queryList = array(
             emergencyPhone,foodDiet,specialNeeds,jacketSize,flightType,arrivalDate,
             arrivalAirport,arrivalFlightNum,arrivalAirline,originCity,arrivalConnectionInfo,departureDate,
             departureAirport,departureFlightNum,departureAirline,destinationCity,departureConnectionInfo
-            FROM data;",
-  "test1"=>"nothing",
-  "test2"=>"nothing",
-  "test3"=>"nothing",
-  "test4"=>"nothing",
-  "test5"=>"nothing",
-  "test6"=>"nothing",
-  "test7"=>"nothing"
+            FROM data;"
   );
 
 $descriptionList = array(
-  "main"=>"This is the master report for attendance.",
-  "test1"=>"nothing",
-  "test2"=>"nothing",
-  "test3"=>"nothing",
-  "test4"=>"nothing",
-  "test5"=>"nothing",
-  "test6"=>"nothing",
-  "test7"=>"nothing"
+  "main"=>"This is the master report for attendance."
 );

@@ -1,9 +1,13 @@
 <?php
 	include "../config/paths.php";
 	include "../config/database.php";
-  include "./queries.php";
-
-	$query = $queryList['main'];
+	include "./queries.php";
+	if (isset($_GET['data'])) {
+		$query = $queryList[$_GET['data']];
+	} else {
+		echo 'No dataset selected.';
+		die();
+	}
 	$result = $mysqli->query($query);
 ?>
 <html>
