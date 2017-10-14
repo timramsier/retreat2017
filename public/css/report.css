@@ -14,31 +14,22 @@
 
 .tile {
   text-decoration: none;
-  margin: 2.5%;
-  width: 20%;
+  margin: 15px;
+  width: 22.5%;
   min-width: 200px;
   min-height: 200px;
   border: solid 1px #040b6c;
   color: #040b6c;
+  padding: 10px;
 }
 .tile p {
- color: #090909;
- font-size: .9em;
+  color: #202991;
+  font-size: .8em;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
 }
 
-.tile h3 {
-  font-weight: 300;
-}
-
-.report-menu ul li a {
-  border: solid 1px #040b6c;
-  border-radius: 5px;
-  margin: 15px 0px;
-  padding: 10px;
-  color: #040b6c;
-  text-decoration: none;
-}
-
-.report-menu ul li a:hover {
-  background: #e6e8ff;
+.tile:hover {
+  transform: scale(1.1);
 }
