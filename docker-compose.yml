@@ -23,4 +23,8 @@ services:
     volumes:
       - .:/var/www/html/
     depends_on:
+<<<<<<< HEAD
       - retreat-database
+=======
+      - retreat-database
+>>>>>>> Add Dockerfile and docker-compose.yml for local development
