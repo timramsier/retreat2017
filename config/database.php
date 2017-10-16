@@ -1,5 +1,5 @@
 <?php
-include 'sql/sql.init.php';
+include 'sql/sql.init.2017.php';
 //============================================================
 //				Create connection credentials
 //============================================================
@@ -19,13 +19,13 @@ $mysqli= new mysqli($db_host,$db_user,$db_password,$db_name);
 //============================================================
 
 if($mysqli->connect_error){
-	printf("Connect failed; %s\n", $mysqli->connect_error);
+	printf("Connect failed: %s\n", $mysqli->connect_error);
 	exit();
 }
 
 foreach ($sql_init as $key => $query) {
 	if(!$mysqli->query($query)) {
-		printf("Initialization failed; %s\n", $mysqli->connect_error);
+		printf("Initialization failed: %s\n", $mysqli->connect_error);
 		printf($query);
 		exit();
 	}

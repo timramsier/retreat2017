@@ -261,4 +261,8 @@ $('#originNY').change(function(){
     }
 })
 
+// optin to tooltips
+$(function() {
+  $('[data-toggle="tooltip"]').tooltip();
+});
 

@@ -8,7 +8,13 @@
 	</h3>
  
 	<p class="text-column-2">
-		<?php	foreach ($activityTypes as $activity) {echo "$activity<br>";}?>
+		<?php	foreach ($activityTypes as $key=>$activity) {
+			if ($activity !== 'No Activity') {
+				echo "<span data-toggle='tooltip' data-placement='top' title='"
+				.$activityDesc[$key].
+				"'>$activity</span><br>";
+			}
+		}?>
 	</p>
 
 </div>
@@ -93,6 +99,3 @@
 	  </label>
 	</div>
 </div>
-
-
-

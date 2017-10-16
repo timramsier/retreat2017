@@ -12,28 +12,28 @@ if (!$validAccess) {
   header('Location:.?view=access');
 }
 
-
-
-
-
 // get the list of activities
 $query1 = "SELECT * FROM activity_key";
 $results = $mysqli->query($query1);
 
 // create an array for all of the activity types
-$activityTypes = array(
-  'Skiing',
-  'Snowboarding',
-  'Snow-Shoeing',
-  'Dog Sledding',
-  'Ice Skating',
-  'Trap & Skeet Shooting',
-  'Fly Fishing',
-  'Hiking',
-  'Aspen Art Tour',
-  'Little Gems Food Tour',
-  'Spa Services '
-);
+$activityTypes = [];
+while ($row = $results->fetch_assoc()) {
+  $activityTypes[] = $row['key_name'];
+}
+
+// get the list of activities
+$query1 = "SELECT * FROM activity_key";
+$results = $mysqli->query($query1);
+
+$activityDesc = [];
+while ($row = $results->fetch_assoc()) {
+  $activityDesc[] = $row['key_desc'];
+}
+
+// get the list of activities
+$query1 = "SELECT * FROM activity_key";
+$results = $mysqli->query($query1);
 
 ?>
 
