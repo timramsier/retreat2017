@@ -1,18 +1,5 @@
 <a href="./public/img/snowshoeing.jpg" style="background-image:url(./public/img/snowshoeing.jpg)" class="updateBackground"></a>
 <input type="hidden" class="choiceNum" name="snowshoeing_choiceNum">
-<div class="activityDescription">
-	<h1>Snowshoeing</h1>
-	<p>
-		If this is your first time visiting Aspen, you are about to embark on a great winter 
-		adventure. Aspen is known for having some of the world’s most famous ski resorts with 
-		altitudes of 7,900 ft to over 11,000 ft.  If you have never snow-shoed before this is 
-		an opportunity to enjoy some of the most iconic sceneries, breathtaking views and 
-		experience serenity at its best!  Explore a winter hike in the snow!
-	</p>
-	<p>
-		If you plan to snowshoe, please let us know how we can help you prepare!
-	</p>
-</div>
 <div class="activityInputs">
 	<hr class='activities'>
 	<h2>Equipment:</h2>

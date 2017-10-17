@@ -1,128 +1,81 @@
-<a img-index="1" href="./public/img/skiing.jpg" style="background-image:url(./public/img/skiing.jpg)" class="updateBackground"></a>
-<input type="hidden" class="choiceNum" name="skiing_choiceNum">
-<div class="activityDescription">
-	<h1>Skiing</h1>
-	<p>
-		Aspen Mountain is just steps away from The Little Nell Hotel…literally out the back door of the 
-		resort.  The mountain is known for its intermediate and expert-level ski runs.  (Aspen Mountain 
-		is not a beginner’s mountain.)  At Aspen Mountain you can ski down the same runs that have hosted 
-		numerous World Cup races; it’s no wonder this mountain is a legend.  
-	</p>
-	<p>
-		If you plan to ski, please let us know how we can help you prepare to hit the slopes!
-	</p>
-</div>
+<a img-index="1" href="./public/img/balloon.jpg" style="background-image:url(./public/img/balloon.jpg)" class="updateBackground"></a>
+<input type="hidden" class="choiceNum" name="balloon_choiceNum">
 <div class="activityInputs">
 	<hr class='activities'>
-	<h2>Equipment:</h2>
+	<h2>Experience:</h2>
 	<div class="row">
 		<div class="col-sm-5 col-sm-push-7">
 			<div class="alert alert-info">
 				<p>
-					<p><strong>Suggested Attire (layer to stay warm):</strong></p>
+					<p><strong>Suggested Attire:</strong></p>
 					<ul class="thin-text">
-						<li>Long underwear</li>
-						<li>Hat</li>
-						<li>Gloves</li>
-						<li>Thick wool socks</li>
-						<li>Windproof pants</li>
-						<li>Windproof jacket</li>
+						<li>Light Layers</li>
+						<li>Flat, Closed-toe Shoes</li>
 						<li>Sunglasses</li>
 						<li>Sunscreen</li>
-						<li>Lip balm</li>
+						<li>Hat</li>
 					</ul>
 				</p>
 				<p>
-					<p><strong>Items you shound NOT bring/wear:</strong></p>
-					<ul class="thin-text">
-						<li>Avoid wearing cotton</li>
-						<li>Jewelry</li>
-						<li>Loose articles of clothing</li>
+					<p><strong>Duration:</strong></p>
+					<ul>
+						<li>Pick-up is at 6:00 am</li>
+						<li>4.5 hours total</li>
+						<li>Approximate 1-hour flight over the Napa Valley</li>
 					</ul>
+				</p>
+				<p>
+					<p><strong>Transportation:</strong></p>
+					<p>Roundtrip transportation provided</p>
 				</p>
 			</div>
 		</div>
 		<div class="col-sm-7 col-sm-pull-5">
 			<p>
-				Will you be bringing your own skiing equipment?
+				Do you experience any of the following? <br/>
+				<ul style='list-style:none; padding: 0;'>
+					<li>Fear of heights</li>
+					<li>Vertigo / Dizziness</li>
+					<li>Motion Sickness</li>
+					<li>Altitude related issues</li>
+					<li>Other Concerns</li>
+				</ul>
 			</p>
 			<div class="radio">
 			  <label>
-			    <input type="radio" name="skiing_equipment" id="skiing_equipment" value="bringing own" dependentValue="false" checked>
-			    I am bringing my own
+			    <input type="radio" name="balloon_comfort" id="balloon_comfort" value="does not experience any" dependentValue="false" checked>
+			    No, I do not experience any condition
 			  </label>
 			</div>
 			<div class="radio">
 			  <label>
-			    <input type="radio" name="skiing_equipment" id="skiing_equipment" value="need provided" dependentValue="true">
-			    I will need it provided
+			    <input type="radio" name="balloon_comfort" id="balloon_comfort" value="does experience one or more" dependentValue="true">
+			    Yes, I experience one or more condition
 			  </label>
 			</div>
 			<br>
 			<p>
-				Please list the equipment you will need provided for you.  Please include your size(s) for 
-				all needed equipment and apparel.  (i.e. skis, boots, poles, helmet, gloves, goggles, etc.)<br>
+				Please list which conditions you experience from above and any important details.<br>
 			</p>
-			<textarea dependentOn="skiing_equipment" name="skiing_neededEquipment" id="skiing_neededEquipment" 
-								class="form-control" rows="5" placeholder="Required if equipment is needed"></textarea>
+			<textarea dependentOn="balloon_comfort" name="balloon_comfortInfo" id="balloon_comfortInfo" 
+								class="form-control" rows="5" placeholder="Required if you experience any of the above"></textarea>
 		</div>
 	</div>
 
 	<hr class='activities'>
-	<div class="col-sm-6">
-		<h2>Lessons</h2>
-		<p>
-			Would you like to receive a private lesson?
-		</p>
-		<div class="radio">
-		  <label>
-		    <input type="radio" name="skiing_lessons" class="skiing_lessons" value="yes" dependentValue="true" checked>
-		    Yes
-		  </label>
-		</div>
-		<div class="radio">
-		  <label>
-		    <input type="radio" name="skiing_lessons" class="skiing_lessons" value="no" dependentValue="false">
-		    No
-		  </label>
-		</div>
-		<br>
-		<p>
-			If Yes, what level of skier are you?
-		</p>
-		<div class="radio">
-		  <label>
-		    <input dependentOn="skiing_lessons" type="radio" name="skiing_skillLevel" class="skiing_skillLevel" value="beginner" checked>
-		    Beginner
-		  </label>
-		</div>
-		<div class="radio">
-		  <label>
-		    <input dependentOn="skiing_lessons" type="radio" name="skiing_skillLevel" class="skiing_skillLevel" value="intermediate">
-		    Intermediate
-		  </label>
-		</div>
-		<div class="radio">
-		  <label>
-		    <input dependentOn="skiing_lessons" type="radio" name="skiing_skillLevel" class="sskiing_killLevel" value="advanced">
-		    Advanced
-		  </label>
-		</div>
-	</div>
-	<div class="col-sm-6">
 		<h2>Health/Injuries</h2>
 		<p>
 			Do you have any Injuries?
 		</p>
 		<div class="radio">
 		  <label>
-		    <input type="radio" name="skiing_injuries" class="skiing_injuries" value="no" dependentValue="false" checked>
+		    <input type="radio" name="balloon_injuries" class="balloon_injuries" value="no" dependentValue="false" checked>
 		    No
 		  </label>
 		</div>
 		<div class="radio">
 		  <label>
-		    <input type="radio" name="skiing_injuries" class="skiing_injuries" value="yes" dependentValue="true" >
+		    <input type="radio" name="balloon_injuries" class="balloon_injuries" value="yes" dependentValue="true" >
 		    Yes
 		  </label>
 		</div>
@@ -130,7 +83,7 @@
 			If Yes, please list any injuries that you have.
 			<br>
 		</p>
-		<textarea dependentOn="skiing_injuries" name="skiing_injuryInfo" id="skiing_injuryInfo" class="form-control" rows="5" 
+		<textarea dependentOn="balloon_injuries" name="balloon_injuryInfo" id="balloon_injuryInfo" class="form-control" rows="5" 
 		placeholder="Required if you said yes to injuries"></textarea>
 	</div>
 </div>

@@ -1,16 +1,5 @@
 <a href="./public/img/hiking.jpg" style="background-image:url(./public/img/hiking.jpg)" class="updateBackground"></a>
 <input type="hidden" class="choiceNum" name="hiking_choiceNum">
-<div class="activityDescription">
-	<h1>Hiking</h1>
-	<p>
-		Step into the splendor of winter in the Rockies.  You will embark on a scenic nature 
-		trail with a professional guide.  Trips are conducted on remote US Forest Service Trails.  
-		You’ll get your blood pumping while taking in the scent of the Aspen Groves, Engelmann 
-		Spruce and the Roaring Fork Valley that surrounds you.  Your private guide will help 
-		you track wildlife, explore mountain ecology and point of various points of interest 
-		along the way.  This is an exhilarating way to enjoy the serenity of winter.  
-	</p>
-</div>
 <div class="activityInputs">
 	<hr class='activities'>
 	<h2>Equipment:</h2>
