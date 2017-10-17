@@ -78,7 +78,8 @@ p.text-column-2{
 	text-align: justify; /* Optional */
 }
 
-#questionaire .activityDescription p{
+#questionaire .activityDescription p, 
+#questionaire .activityDescription .text {
 	font-size: 14px;
 	font-weight: 300;
 	/*margin-bottom: 30px;*/

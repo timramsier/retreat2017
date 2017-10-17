@@ -1,13 +1,5 @@
 <a href="./public/img/spa.jpg" style="background-image:url(./public/img/spa.jpg)" class="updateBackground"></a>
 <input type="hidden" class="choiceNum" name="spa_choiceNum">
-<div class="activityDescription">
-	<h1>Spa Services</h1>
-	<p>
-		Voted #1 Spa in the World by Travel + Leisure, embark on a relaxing journey at the Remède Asp Spa located at the St. 
-		Regis Aspen. Indulge in a service that pampers! Before and/or after your service take advantage of the spa’s amenities, 
-		including the plunge pools, steam room, oxygen lounge, and complimentary champagne and nibbles.
-	</p>
-</div>
 <br>
 <div class="activityInputs">
 	<hr class='activities'>

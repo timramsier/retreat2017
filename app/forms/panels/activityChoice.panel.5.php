@@ -1,14 +1,5 @@
 <a href="./public/img/iceskating.jpg" style="background-image:url(./public/img/iceskating.jpg)" class="updateBackground"></a>
 <input type="hidden" class="choiceNum" name="iceSkating_choiceNum">
-<div class="activityDescription">
-	<h1>Ice-Skating</h1>
-	<p>
-		Nothing says winter in the mountains quite like the vision of twirling around an ice rink. 
-		Here in Aspen, there are several places to live out that dream. From the low-key Aspen Ice 
-		Garden to the outdoor SK8 (aka Silver Circle rink), there is something for ice skaters of 
-		all abilities in Aspen. 
-	</p>
-</div>
 <div class="activityInputs">
 	<hr class='activities'>
 	<h2>Equipment:</h2>

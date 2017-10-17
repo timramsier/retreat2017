@@ -3,6 +3,7 @@ function validateForm(){
         phoneInput              = $("div[data-index=" + selectedPanel + "].form-panel .bfh-phone.required"),
         checkBoxes              = $("div[data-index=" + selectedPanel + "].form-panel .checkbox-group.required"),
         dependentInputs         = $("[dependentOn]");
+        pairedInputs            = $("[pairWith]");
         
     for (var i = requiredFormElements.length -1; i >= 0; i--){
         if ((requiredFormElements[i].value === '' || requiredFormElements[i].value === "null") && $(requiredFormElements[i]).is(":visible")) {
@@ -50,6 +51,15 @@ function validateForm(){
             } 
         } 
     };
+
+    // validate pair inputs (one must be true) only works with text
+    pairedInputs.each(function() {
+        var pairInput = document.getElementById($(this).attr('pairWith'));
+        var pairInput = document.getElementById($(this).attr('pairWith'));
+        if (pairInput.length < 1) {
+            return false;
+        }
+    });
 
     return true;
 }

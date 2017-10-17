@@ -1,14 +1,5 @@
 <a href="./public/img/flyfishing.jpg" style="background-image:url(./public/img/flyfishing.jpg)" class="updateBackground"></a>
 <input type="hidden" class="choiceNum" name="flyFishing_choiceNum">
-<div class="activityDescription">
-	<h1>Fly Fishing</h1>
-	<p>
-		Fly fishing for wild trout in the unspoiled waters of Western Colorado is surely one of 
-		life’s greatest pleasures.  Winter brings less anglers and often more strikes.  You will 
-		fish with a private guide.  Full equipment, license, drinks and transportation are provided 
-		for this trip.
-	</p>
-</div>
 <div class="activityInputs">
 	<hr class='activities'>
 	<h2>Equipment:</h2>

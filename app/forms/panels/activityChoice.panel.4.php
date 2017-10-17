@@ -1,20 +1,5 @@
 <a href="./public/img/dogsledding.jpg" style="background-image:url(./public/img/dogsledding.jpg)" class="updateBackground"></a>
 <input type="hidden" class="choiceNum" name="dogSledding_choiceNum">
-<div class="activityDescription">
-	<h1>Dog-Sledding</h1>
-	<p>
-		If this is your first time visiting Aspen, you are about to embark on a great winter 
-		adventure. A dog sled ride is an exciting journey through the pristine Snowmass 
-		backcountry. Each sled is pulled by 8-10 Alaskan Husky sled dogs and are guided by 
-		an experienced musher. The dogs are born and bred to run and they love the thrill 
-		of the run just as much as you will. Whether sunny or snowing, you will experience 
-		an Aspen/Snowmass wilderness adventure as never before.  If you have never experienced 
-		dog-sledding this is a must.
-	</p>
-	<p>
-		If you plan to dog sled, please let us know how we can help you prepare!
-	</p>
-</div>
 <div class="activityInputs">
 	<hr class='activities'>
 	<h2>Equipment:</h2>

@@ -11,7 +11,7 @@
 		<?php	foreach ($activityTypes as $key=>$activity) {
 			if ($activity !== 'No Activity') {
 				echo "<span data-toggle='tooltip' data-placement='top' title='"
-				.$activityDesc[$key].
+				.strip_tags($activityDesc[$key + 1]).
 				"'>$activity</span><br>";
 			}
 		}?>
