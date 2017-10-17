@@ -1,0 +1,26 @@
+version: '2'
+services:
+  retreat-database:
+    image: mysql:latest
+    environment:
+      - MYSQL_USER=secUser
+      - MYSQL_PASSWORD=eKcGZr59zAa2BEWU
+      - MYSQL_DATABASE=IAC_retreat
+      - MYSQL_ROOT_PASSWORD=p@ssword
+    ports:
+      - 3306:3306
+    volumes:
+      - /data/mysql:/var/lib/mysql
+  retreat-app:
+    build: .
+    ports:
+      - "80:80"
+    environment:
+      - RDS_HOSTNAME=retreat-database
+      - RDS_DB_NAME=IAC_retreat
+      - RDS_USERNAME=secUser
+      - RDS_PASSWORD=eKcGZr59zAa2BEWU
+    volumes:
+      - .:/var/www/html/
+    depends_on:
+      - retreat-database
