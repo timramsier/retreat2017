@@ -2,6 +2,11 @@
 
 include $PATH['CONFIG']."database.php";
 
+// echo "<pre><code>";
+// print_r($_POST);
+// echo "</code></pre>";
+// die();
+
 $validated = TRUE;
 
 if(isset($_POST['attending']) && $_POST['attending'] != ''){
@@ -52,11 +57,19 @@ if(isset($_POST['address1']) && $_POST['address1'] != ''){
 if(isset($_POST['address2']) && $_POST['address2'] != ''){
     $address2 = $mysqli->real_escape_string($_POST['address2']);
 } else {$address2 = "";}
+
 if(isset($_POST['city']) && $_POST['city'] != ''){
     $city = $mysqli->real_escape_string($_POST['city']);
 } else {
 	$validated = FALSE;
 }
+
+if(isset($_POST['country']) && $_POST['country'] != ''){
+    $country = $mysqli->real_escape_string($_POST['country']);
+} else {
+	$validated = FALSE;
+}
+
 if(isset($_POST['state']) && $_POST['state'] != ''){
     $state = $mysqli->real_escape_string($_POST['state']);
 } else {
@@ -108,11 +121,7 @@ if(isset($_POST['jacketSize']) && $_POST['jacketSize'] != ''){
 } else {
 	$validated = FALSE;
 }
-if(isset($_POST['flightType']) && $_POST['flightType'] != ''){
-    $flightType = $mysqli->real_escape_string($_POST['flightType']);
-} else {
-	$validated = FALSE;
-}
+
 if(isset($_POST['arrivalDate']) && $_POST['arrivalDate'] != ''){
     $arrivalDate = $mysqli->real_escape_string($_POST['arrivalDate']);
 } else {
@@ -170,8 +179,6 @@ if(isset($_POST['departureConnectionInfo']) && $_POST['departureConnectionInfo']
     $departureConnectionInfo = $mysqli->real_escape_string($_POST['departureConnectionInfo']);
 } else { $departureConnectionInfo = '';}
 
-
-
 $hashKey = $_POST["hashKey"];
 $userAgent = $_POST["userAgent"];
 $userIP = $_POST["userIP"];
@@ -180,20 +187,20 @@ if ($validated === FALSE){
 	header('Location: .?validation=FALSE');
 } else {
 	$query = "INSERT INTO data (hashKey,userAgent,userIP,firstName,lastName,company,title,
-															officePhone,mobilePhone,email,address1,address2,city,state,zip,
+															officePhone,mobilePhone,email,address1,address2,city,country,state,zip,
 															eaName,eaEmail,eaOfficePhone,eaMobilePhone,emergencyName,
 															emergencyPhone,foodDiet,specialNeeds,jacketSize,arrivalDate,arrivalAirport,
 															arrivalFlightNum,departureDate,departureAirport,
 															departureFlightNum,arrivalAirline,originCity,arrivalConnectionInfo,
-															departureAirline,destinationCity,departureConnectionInfo,attending,flightType)
+															departureAirline,destinationCity,departureConnectionInfo,attending)
 						VALUES 						('$hashKey','$userAgent','$userIP','$firstName','$lastName','$company','$title',
-															'$officePhone','$mobilePhone','$email','$address1','$address2','$city','$state','$zip',
+															'$officePhone','$mobilePhone','$email','$address1','$address2','$city','$country','$state','$zip',
 															'$eaName','$eaEmail','$eaOfficePhone','$eaMobilePhone','$emergencyName',
 															'$emergencyPhone','$foodDiet','$specialNeeds','$jacketSize','$arrivalDate','$arrivalAirport',
 															'$arrivalFlightNum','$departureDate','$departureAirport',
 															'$departureFlightNum','$arrivalAirline','$originCity','$arrivalConnectionInfo',
-															'$departureAirline','$destinationCity','$departureConnectionInfo','$attending','$flightType')";
-	 // echo $query;die();
+															'$departureAirline','$destinationCity','$departureConnectionInfo','$attending')";
+	//  echo $query;die();
 
 	if ($mysqli->query($query)) {
 	    header('Location: ?view=complete&result=success&attending='.$attending);

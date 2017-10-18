@@ -1,44 +1,11 @@
-<div class="col-xs-12">
-  <div class="form-group">
-    <label for="originNY">Is your Origin and Return Destination in the New York City Area?</label>
-    <div class='row'>
-      <div class="col-sm-4">    
-        <select class="form-control input-sm" id="originNY">
-          <option <?php if(isset($_GET["originNY"]) && $_GET["originNY"] === "Yes"){echo "selected";} ?> value="Yes">Yes</option>
-          <option <?php if(isset($_GET["originNY"]) && $_GET["originNY"] === "No"){echo "selected";} ?> value="No">No</option>
-        </select>
-      </div>
-        <div class='col-sm-8'>
-          <div class="alert alert-info" id="origin-note">
-            <p>
-              <strong>Note:</strong> If you are leaving from the <span style="text-decoration:underline">New York City Area</span> please
-              do not book travel until you hear from someone in the IAC Events Department.
-            </p>
-          </div>
-        </div>
-    </div>
-  </div>
-</div>
 <div class='origin-toggle'>
   <div class="col-xs-12">
-    <div class="form-group">
-      <label for="flightType">Are you flying Commercial or Private?</label>
-      <div class='row'>
-        <div class="col-sm-4">  
-          <select name="flightType" class="form-control input-sm" id="flightType">
-            <option <?php if(isset($_GET["flightType"]) && $_GET["flightType"] === "Private"){echo "selected";} ?> value="Private">Private</option>
-            <option <?php if(isset($_GET["flightType"]) && $_GET["flightType"] === "Commercial"){echo "selected";} ?> value="Commerical">Commerical</option>
-            <option <?php if(isset($_GET["flightType"]) && $_GET["flightType"] === "Corporate Jet"){echo "selected";} ?> value="Corporate Jet"></option>
-          </select>
-        </div>
-        <div class='col-sm-8'>
-          <div class="alert alert-info" id="private-note">
-            <p>
-              <strong>Note:</strong> If you are flying <span style="text-decoration:underline">Private</span> please forward your travel
-              itinerary and flight information to Emily Somers <strong><a href="mailto:emily.somers@iac.com">emily.somers@iac.com</a></strong>.
-            </p>
-          </div>
-        </div>
+    <div class='row'>
+      <div class="alert alert-info" id="private-note">
+        <p>
+          <strong>Note:</strong> Please forward your travel itinerary and flight information to Emily Somers 
+          <strong><a href="mailto:emily.somers@iac.com">emily.somers@iac.com</a></strong>.
+        </p>
       </div>
     </div>
   </div>

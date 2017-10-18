@@ -207,58 +207,58 @@ $('.multi-form .form-panel-button').on('click',function(){
 
 
 // Form interaction
-$(window).on('load',function(){
-    $('.origin-toggle').hide();
-    $('#flightType').val('Corporate Jet');
-    $('option[value="Corporate Jet"]').prop('disabled',false);
-    $('option[value="Corporate Jet"]').show();
-    $('#originNY').val("Yes");
-    $('.origin-toggle').find('input').val('null');
-    $('.origin-toggle').find('textarea').val('null');
+// $(window).on('load',function(){
+//     $('.origin-toggle').hide();
+//     // $('#flightType').val('Corporate Jet');
+//     // $('option[value="Corporate Jet"]').prop('disabled',false);
+//     // $('option[value="Corporate Jet"]').show();
+//     // $('#originNY').val("Yes");
+//     $('.origin-toggle').find('input').val('null');
+//     $('.origin-toggle').find('textarea').val('null');
 
-})
-
-
-$('#originNY').change(function(){
-    if ($(this).val() === "No") {
-        $('.origin-toggle').show();
-        $('.origin-toggle').find('input').val('');
-        $('.origin-toggle').find('textarea').val('');
-        $('#flightType').val('Commerical');
-        $('option[value="Corporate Jet"]').prop('disabled',true);
-        $('option[value="Corporate Jet"]').hide();
-    }
-    if ($(this).val() === "Yes") {
-        $('.origin-toggle').hide();
-        $('.origin-toggle').find('input').val('null');
-        $('.origin-toggle').find('textarea').val('null');
-        $('#flightType').val('Corporate Jet');
-        $('option[value="Corporate Jet"]').prop('disabled',false);
-        $('option[value="Corporate Jet"]').show();
-    }
-})
+// })
 
 
-$("#private-note").hide();
+// $('#originNY').change(function(){
+//     if ($(this).val() === "No") {
+//         $('.origin-toggle').show();
+//         $('.origin-toggle').find('input').val('');
+//         $('.origin-toggle').find('textarea').val('');
+//         $('#flightType').val('Commerical');
+//         $('option[value="Corporate Jet"]').prop('disabled',true);
+//         $('option[value="Corporate Jet"]').hide();
+//     }
+//     if ($(this).val() === "Yes") {
+//         $('.origin-toggle').hide();
+//         $('.origin-toggle').find('input').val('null');
+//         $('.origin-toggle').find('textarea').val('null');
+//         $('#flightType').val('Corporate Jet');
+//         $('option[value="Corporate Jet"]').prop('disabled',false);
+//         $('option[value="Corporate Jet"]').show();
+//     }
+// })
 
-$('#flightType').change(function(){
-    if ($(this).val() === "Commerical") {
-        $("#private-note").hide();
-    }
-    if ($(this).val() === "Private") {
-        $("#private-note").show();
-    }
-})
+
+// $("#private-note").hide();
+
+// $('#flightType').change(function(){
+//     if ($(this).val() === "Commerical") {
+//         $("#private-note").hide();
+//     }
+//     if ($(this).val() === "Private") {
+//         $("#private-note").show();
+//     }
+// })
 
 
-$('#originNY').change(function(){
-    if ($(this).val() === "No") {
-        $("#origin-note").hide();
-    }
-    if ($(this).val() === "Yes") {
-        $("#origin-note").show();
-        $("#private-note").hide();
-    }
-})
+// $('#originNY').change(function(){
+//     if ($(this).val() === "No") {
+//         $("#origin-note").hide();
+//     }
+//     if ($(this).val() === "Yes") {
+//         $("#origin-note").show();
+//         $("#private-note").hide();
+//     }
+// })
 
 
