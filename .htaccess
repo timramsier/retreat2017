@@ -1,5 +1,7 @@
-<Files ~ "^\.(htaccess|htpasswd)$">
-deny from all
-</Files>
-Options Indexes
-order deny,allow
+AuthType Basic
+
+AuthName "Restricted Files"
+
+AuthUserFile .htpasswd
+
+Require user test.user
