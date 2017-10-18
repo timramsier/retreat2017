@@ -1,7 +1,0 @@
-AuthType Basic
-
-AuthName "Restricted Files"
-
-AuthUserFile .htpasswd
-
-Require user test.user
