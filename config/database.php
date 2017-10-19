@@ -1,12 +1,12 @@
 <?php
-include 'sql/sql.init.2017.php';
+include 'sql/sql.init.php';
 //============================================================
 //				Create connection credentials
 //============================================================
 
 $db_host = getenv(RDS_HOSTNAME) ?: 'localhost';
 $db_name = getenv(RDS_DB_NAME) ?: 'IAC_retreat';
-$db_user = getenv(RDS_USERNAME) ?: 'sec_user';
+$db_user = getenv(RDS_USERNAME) ?: 'secUser';
 $db_password = getenv(RDS_PASSWORD) ?: 'eKcGZr59zAa2BEWU';
 //Create mysqli object
 //============================================================
