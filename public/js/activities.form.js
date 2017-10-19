@@ -60,12 +60,16 @@ function selectGroup(selectTarget){
 function updateChoicePanel(baseRootId, baseUpdateId, indexNum){
 
 	$("#" + baseRootId + indexNum).on("change",function(){
+
 		if (!isNaN(Number($(this).val()))) {
 			var panelValue = Number($(this).val()) + 1;
 		} 
 		else {
 					var panelValue = $(this).val();
-		};
+				};
+
+		$(`#panel-${indexNum} .activityDescription .title`).html(activityTypes[panelValue - 1]);
+		$(`#panel-${indexNum} .activityDescription .text`).html(activityDesc[panelValue]);
 
 		var	url = "./app/forms/panels/activityChoice.panel." + panelValue + ".php";
 		$.ajax(url).done(function(response){

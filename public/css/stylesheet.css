@@ -78,7 +78,8 @@ p.text-column-2{
 	text-align: justify; /* Optional */
 }
 
-#questionaire .activityDescription p{
+#questionaire .activityDescription p, 
+#questionaire .activityDescription .text {
 	font-size: 14px;
 	font-weight: 300;
 	/*margin-bottom: 30px;*/
@@ -244,6 +245,19 @@ margin-bottom: 100px;
 	font-size: 10px;
 }
 
+.tooltip-inner {
+	padding: 15px 5px;
+	max-width: 100%;
+	width: 500px;
+}
+span[data-toggle=tooltip] {
+	cursor: help;
+}
+
+span[data-toggle=tooltip]:hover {
+	color: black;
+	font-weight: 600;
+}
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 

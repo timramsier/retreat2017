@@ -1,26 +1,5 @@
 <a href="./public/img/skeetshooting.jpg" style="background-image:url(./public/img/skeetshooting.jpg)" class="updateBackground"></a>
 <input type="hidden" class="choiceNum" name="skeetShooting_choiceNum">
-<div class="activityDescription">
-	<h1>Trap & Skeet Shooting</h1>
-	<p>
-		Located just a few miles from Aspen is one of Colorado’s finest shooting clubs. Upon arrival at 
-		the club your instructor will begin with an introduction to shooting which includes shotgun safety, 
-		proper gun handling, and an overview of the sport.  You will be coached on skill during the live fire.  
-		There will be an opportunity to shoot on both types of fields - trap range and skeet range. 
-	</p>
-	<p>
-		<ul class="list-unstyled">
-			<li>
-				<strong>Trap Shooting</strong> 
-				– The targets are launched from a single “house” or machine.
-			</li>
-			<li>
-				<strong>Skeet Shooting</strong> 
-				– Targets are launched from two “houses” in somewhat “sideways” 
-				path that intersect in front of the shooter.
-			</li>
-	</p>
-</div>
 <div class="activityInputs">
 	<hr class='activities'>
 	<h2>Experience:</h2>

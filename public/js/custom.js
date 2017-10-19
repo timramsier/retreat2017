@@ -261,4 +261,8 @@ $('.multi-form .form-panel-button').on('click',function(){
 //     }
 // })
 
+// optin to tooltips
+$(function() {
+  $('[data-toggle="tooltip"]').tooltip();
+});
 
