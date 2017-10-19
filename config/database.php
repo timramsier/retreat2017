@@ -1,5 +1,5 @@
 <?php
-include 'sql/sql.init.2017.php';
+include 'sql/sql.init.php';
 //============================================================
 //				Create connection credentials
 //============================================================
