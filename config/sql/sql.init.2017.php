@@ -4,6 +4,53 @@ $sql_init = array(
   // setup SQL settings
   'SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";',
   'SET time_zone = "+00:00";',
+
+  // main data table
+  'CREATE TABLE IF NOT EXISTS `data` (
+    `id` int(11) NOT NULL,
+    `hashKey` varchar(128) NOT NULL,
+    `userAgent` text NOT NULL,
+    `userIP` varchar(128) NOT NULL,
+    `attending` varchar(128) NOT NULL,
+    `firstName` varchar(256) NOT NULL,
+    `lastName` varchar(256) NOT NULL,
+    `company` varchar(256) NOT NULL,
+    `title` varchar(256) NOT NULL,
+    `email` varchar(512) NOT NULL,
+    `address1` varchar(512) NOT NULL,
+    `address2` varchar(512) NOT NULL,
+    `city` varchar(256) NOT NULL,
+    `country` varchar(256) NOT NULL,
+    `state` varchar(256) NOT NULL,
+    `zip` varchar(128) NOT NULL,
+    `officePhone` varchar(32) NOT NULL,
+    `mobilePhone` varchar(32) NOT NULL,
+    `eaName` varchar(256) NOT NULL,
+    `eaEmail` varchar(256) NOT NULL,
+    `eaOfficePhone` varchar(32) NOT NULL,
+    `eaMobilePhone` varchar(32) NOT NULL,
+    `emergencyName` varchar(512) NOT NULL,
+    `emergencyPhone` varchar(32) NOT NULL,
+    `foodDiet` varchar(1024) DEFAULT NULL,
+    `specialNeeds` varchar(1024) DEFAULT NULL,
+    `jacketSize` varchar(256) NOT NULL,
+    `arrivalDate` varchar(256) NOT NULL,
+    `arrivalAirport` varchar(256) NOT NULL,
+    `arrivalFlightNum` varchar(256) NOT NULL,
+    `departureDate` varchar(256) NOT NULL,
+    `departureAirport` varchar(256) NOT NULL,
+    `departureFlightNum` varchar(256) NOT NULL,
+    `arrivalAirline` varchar(256) NOT NULL,
+    `originCity` varchar(256) NOT NULL,
+    `arrivalConnectionInfo` varchar(1024) DEFAULT NULL,
+    `departureAirline` varchar(256) NOT NULL,
+    `destinationCity` varchar(256) NOT NULL,
+    `departureConnectionInfo` varchar(1024) DEFAULT NULL,
+    PRIMARY KEY (`id`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=latin1;',
+  'ALTER TABLE `data`
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;',
+    
   // activity key (make sure to mark your paragraphs in key_desc)
   'CREATE TABLE IF NOT EXISTS `activity_key` (
     `key_id` int(11) NOT NULL,

@@ -1,4 +1,5 @@
 function validateForm(){
+
     var requiredFormElements    = $(".multi-form .required"),
         phoneInput              = $("div[data-index=" + selectedPanel + "].form-panel .bfh-phone.required"),
         checkBoxes              = $("div[data-index=" + selectedPanel + "].form-panel .checkbox-group.required"),
@@ -55,9 +56,11 @@ function validateForm(){
     // validate pair inputs (one must be true) only works with text
     pairedInputs.each(function() {
         var pairInput = document.getElementById($(this).attr('pairWith'));
-        var pairInput = document.getElementById($(this).attr('pairWith'));
-        if (pairInput.length < 1) {
-            return false;
+        if (pairInput.value.length < 1 && this.value.length < 1) {
+        $(pairInput)
+            .parent()
+            .addClass('has-error');
+        formContinue = false;
         }
     });
 

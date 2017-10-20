@@ -97,12 +97,13 @@ $('.multi-form .form-panel-button').on('click',function(){
         clickEvent              = $(this),
         dependentInputs         = $("[dependentOn]"),
         defaultIMG              = "./public/img/aspen_01.jpg";
+        pairedInputs            = $("div[data-index=" + selectedPanel + "] [pairWith]");
     $('.success-message').hide();
     $('.error-message').hide();
 
     if ($(this).attr('data-toggle') === 'next' || $(this).attr('data-toggle') === 'submit') {
         $('.has-error').removeClass('has-error')
-
+        console.log('validating')
         for (var i = requiredFormElements.length -1; i >= 0; i--){
             if ((requiredFormElements[i].value === '' || requiredFormElements[i].value === "null") && $(requiredFormElements[i]).is(":visible")) {
                 $("input[name=" + requiredFormElements[i].name + "]").parent().addClass("has-error");
@@ -150,6 +151,15 @@ $('.multi-form .form-panel-button').on('click',function(){
             } 
         };
 
+        // validate pair inputs (one must be true) only works with text
+
+        pairedInputs.each(function() {
+            var pairInput = document.getElementById($(this).attr('pairWith'));
+            if (pairInput.value.length < 1 && this.value.length < 1) {
+                $(pairInput).parent().addClass("has-error")
+                formContinue = false;
+            }
+        });
         
         if (formContinue !== false) {       
             if ($(this).attr('data-toggle') === 'next' ) {
