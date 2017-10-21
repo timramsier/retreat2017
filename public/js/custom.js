@@ -103,7 +103,6 @@ $('.multi-form .form-panel-button').on('click',function(){
 
     if ($(this).attr('data-toggle') === 'next' || $(this).attr('data-toggle') === 'submit') {
         $('.has-error').removeClass('has-error')
-        console.log('validating')
         for (var i = requiredFormElements.length -1; i >= 0; i--){
             if ((requiredFormElements[i].value === '' || requiredFormElements[i].value === "null") && $(requiredFormElements[i]).is(":visible")) {
                 $("input[name=" + requiredFormElements[i].name + "]").parent().addClass("has-error");
@@ -143,10 +142,11 @@ $('.multi-form .form-panel-button').on('click',function(){
             if (controlInput.attr("dependentValue") === "true") { 
                 // validate 
                 if (dependentInputs[i].value === '' || dependentInputs[i].value === "null") {
+
                     $("[name=" + dependentInputs[i].name + "]").parent().addClass("has-error")
                     $("[name=" + dependentInputs[i].name + "]").addClass("has-error")
-                    $("[name=" + $("[name=" + dependentInputs[i].name + "]").attr("dependentOn") + "]").parent().parent().addClass("has-error")
-                formContinue = false;
+                    // $("[name=" + $("[name=" + dependentInputs[i].name + "]").attr("dependentOn") + "]").parent().parent().addClass("has-error")
+                    formContinue = false;
                 } 
             } 
         };

@@ -104,6 +104,9 @@ p.text-column-2{
 	font-weight: 300;
 }
 
+ul.thin-text {
+	padding-left: 15px;
+}
 
 .overlay{
 	z-index: -1;
