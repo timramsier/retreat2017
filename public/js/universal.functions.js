@@ -3,9 +3,10 @@ function validateForm(){
     var requiredFormElements    = $(".multi-form .required"),
         phoneInput              = $("div[data-index=" + selectedPanel + "].form-panel .bfh-phone.required"),
         checkBoxes              = $("div[data-index=" + selectedPanel + "].form-panel .checkbox-group.required"),
-        dependentInputs         = $("[dependentOn]");
-        pairedInputs            = $("[pairWith]");
-        
+        dependentInputs         = $("[dependentOn]"),
+        pairedInputs            = $("[pairWith]"),
+        formContinue            = true;
+    $('.has-error').removeClass('has-error');
     for (var i = requiredFormElements.length -1; i >= 0; i--){
         if ((requiredFormElements[i].value === '' || requiredFormElements[i].value === "null") && $(requiredFormElements[i]).is(":visible")) {
             $("input[name=" + requiredFormElements[i].name + "]").parent().addClass("has-error");
@@ -57,14 +58,15 @@ function validateForm(){
     pairedInputs.each(function() {
         var pairInput = document.getElementById($(this).attr('pairWith'));
         if (pairInput.value.length < 1 && this.value.length < 1) {
-        $(pairInput)
-            .parent()
-            .addClass('has-error');
+            $(pairInput)
+                .parent()
+                .addClass('has-error');
         formContinue = false;
         }
+        // return formContinue;
     });
 
-    return true;
+    return formContinue;
 }
 
 function crossFadeBG(selectedPanel,panelAdj){
