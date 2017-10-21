@@ -66,7 +66,7 @@
 		</div>			
 
 	</div>
-	<div class="col-sm-6">
+	<!-- <div class="col-sm-6">
 		<div class="alert alert-warning">
 			If weather conditions are not suitable for the activity/ies of your choosing, other activities will be offered.  
 			Thanks for your understanding.
@@ -97,5 +97,5 @@
 	    <input name="afternoon" type="checkbox" value="afternoon">
 	    Afternoon (approximately 2:00 pm – 5:00 pm)
 	  </label>
-	</div>
+	</div> -->
 </div>

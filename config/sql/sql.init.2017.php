@@ -4,6 +4,72 @@ $sql_init = array(
   // setup SQL settings
   'SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";',
   'SET time_zone = "+00:00";',
+
+  // main data table
+  'CREATE TABLE IF NOT EXISTS `data` (
+    `id` int(11) NOT NULL,
+    `hashKey` varchar(128) NOT NULL,
+    `userAgent` text NOT NULL,
+    `userIP` varchar(128) NOT NULL,
+    `attending` varchar(128) NOT NULL,
+    `firstName` varchar(256) NOT NULL,
+    `lastName` varchar(256) NOT NULL,
+    `company` varchar(256) NOT NULL,
+    `title` varchar(256) NOT NULL,
+    `email` varchar(512) NOT NULL,
+    `address1` varchar(512) NOT NULL,
+    `address2` varchar(512) NOT NULL,
+    `city` varchar(256) NOT NULL,
+    `country` varchar(256) NOT NULL,
+    `state` varchar(256) NOT NULL,
+    `zip` varchar(128) NOT NULL,
+    `officePhone` varchar(32) NOT NULL,
+    `mobilePhone` varchar(32) NOT NULL,
+    `eaName` varchar(256) NOT NULL,
+    `eaEmail` varchar(256) NOT NULL,
+    `eaOfficePhone` varchar(32) NOT NULL,
+    `eaMobilePhone` varchar(32) NOT NULL,
+    `emergencyName` varchar(512) NOT NULL,
+    `emergencyPhone` varchar(32) NOT NULL,
+    `foodDiet` varchar(1024) DEFAULT NULL,
+    `specialNeeds` varchar(1024) DEFAULT NULL,
+    `jacketSize` varchar(256) NOT NULL,
+    `arrivalDate` varchar(256) NOT NULL,
+    `arrivalAirport` varchar(256) NOT NULL,
+    `arrivalFlightNum` varchar(256) NOT NULL,
+    `departureDate` varchar(256) NOT NULL,
+    `departureAirport` varchar(256) NOT NULL,
+    `departureFlightNum` varchar(256) NOT NULL,
+    `arrivalAirline` varchar(256) NOT NULL,
+    `originCity` varchar(256) NOT NULL,
+    `arrivalConnectionInfo` varchar(1024) DEFAULT NULL,
+    `departureAirline` varchar(256) NOT NULL,
+    `destinationCity` varchar(256) NOT NULL,
+    `departureConnectionInfo` varchar(1024) DEFAULT NULL,
+    PRIMARY KEY (`id`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=latin1;',
+  'ALTER TABLE `data`
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;',
+    
+  // activity main
+  'CREATE TABLE IF NOT EXISTS `activity_main` (
+    `id` int(11) NOT NULL,
+    `hashKey` varchar(128) DEFAULT NULL,
+    `userAgent` varchar(1024) DEFAULT NULL,
+    `userIP` varchar(128) DEFAULT NULL,
+    `userFirstName` varchar(256) DEFAULT NULL,
+    `userLastName` varchar(256) DEFAULT NULL,
+    `choice1` int(11) DEFAULT NULL,
+    `choice2` int(11) DEFAULT NULL,
+    `choice3` int(11) DEFAULT NULL,
+    `morning` varchar(128) DEFAULT NULL,
+    `midDay` varchar(128) DEFAULT NULL,
+    `afternoon` varchar(128) DEFAULT NULL,
+    PRIMARY KEY (`id`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=latin1;',
+  'ALTER TABLE `activity_main`
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;',
+    
   // activity key (make sure to mark your paragraphs in key_desc)
   'CREATE TABLE IF NOT EXISTS `activity_key` (
     `key_id` int(11) NOT NULL,
@@ -14,7 +80,8 @@ $sql_init = array(
   ) ENGINE=InnoDB DEFAULT CHARSET=latin1;',
   'ALTER TABLE `activity_key`
     MODIFY `key_id` int(11) NOT NULL AUTO_INCREMENT;',
-  
+  'TRUNCATE TABLE `activity_key`', // make sure data in table is accurate
+
   // 0 - no activity 
   "INSERT IGNORE INTO `activity_key` (`key_id`, `key_name`, `key_alias`, `key_desc`) VALUES
   (0, 'No Activity', 'noactivity', 'nothing to see')",
@@ -39,6 +106,8 @@ $sql_init = array(
     `balloon_comfort` varchar(128) DEFAULT NULL,
     `balloon_comfortInfo` varchar(1024) DEFAULT NULL,
     `balloon_user` varchar(256) NOT NULL,
+    `balloon_foodRestriction` varchar(128) DEFAULT NULL,
+    `balloon_foodRestrictionInfo` varchar(1024) DEFAULT NULL,
     `balloon_injuries` varchar(128) DEFAULT NULL,
     `balloon_injuryInfo` varchar(1024) DEFAULT NULL,
     PRIMARY KEY (`balloon_id`)
@@ -87,6 +156,19 @@ $sql_init = array(
     </p>
     <p>Tour includes use of a Hybrid bike and helmet, unlimited water, Wine Country picnic lunch.</p>'
   );",
+  'CREATE TABLE IF NOT EXISTS `activity_sipNcycle` (
+    `sipNcycle_id` int(11) NOT NULL,
+    `sipNcycle_user` varchar(256) NOT NULL,
+    `sipNcycle_choiceNum` varchar(128) DEFAULT NULL,
+    `sipNcycle_height` varchar(128) DEFAULT NULL,
+    `sipNcycle_foodRestriction` varchar(128) DEFAULT NULL,
+    `sipNcycle_foodRestrictionInfo` varchar(1024) DEFAULT NULL,
+    `sipNcycle_injuries` varchar(128) DEFAULT NULL,
+    `sipNcycle_injuryInfo` varchar(1024) DEFAULT NULL,
+    PRIMARY KEY (`sipNcycle_id`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=latin1;',
+  'ALTER TABLE `activity_sipNcycle`
+    MODIFY `sipNcycle_id` int(11) NOT NULL AUTO_INCREMENT;',
 
   // 4 - Tennis
   "INSERT IGNORE INTO `activity_key` (`key_id`, `key_name`, `key_alias`, `key_desc`) VALUES
@@ -100,6 +182,18 @@ $sql_init = array(
       program.
     </p>'
   );",
+  'CREATE TABLE IF NOT EXISTS `activity_tennis` (
+    `tennis_id` int(11) NOT NULL,
+    `tennis_user` varchar(256) NOT NULL,
+    `tennis_choiceNum` varchar(128) DEFAULT NULL,
+    `tennis_instructionType` varchar(128) DEFAULT NULL,
+    `tennis_instructionLevel` varchar(128) DEFAULT NULL,
+    `tennis_injuries` varchar(128) DEFAULT NULL,
+    `tennis_injuryInfo` varchar(1024) DEFAULT NULL,
+    PRIMARY KEY (`tennis_id`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=latin1;',
+  'ALTER TABLE `activity_tennis`
+    MODIFY `tennis_id` int(11) NOT NULL AUTO_INCREMENT;',
 
   // 5 - Horseback Riding
   "INSERT IGNORE INTO `activity_key` (`key_id`, `key_name`, `key_alias`, `key_desc`) VALUES
@@ -112,6 +206,18 @@ $sql_init = array(
       fantastic way to take in the breathtaking vistas of the Rapp Ranch Estate and the surrounding hills of Coombsville.
     </p>'
   );",
+  'CREATE TABLE IF NOT EXISTS `activity_horsebackRiding` (
+    `horsebackRiding_id` int(11) NOT NULL,
+    `horsebackRiding_user` varchar(256) NOT NULL,
+    `horsebackRiding_choiceNum` varchar(128) DEFAULT NULL,
+    `horsebackRiding_experience` varchar(128) DEFAULT NULL,
+    `horsebackRiding_comfort` varchar(128) DEFAULT NULL,
+    `horsebackRiding_injuries` varchar(128) DEFAULT NULL,
+    `horsebackRiding_injuryInfo` varchar(1024) DEFAULT NULL,
+    PRIMARY KEY (`horsebackRiding_id`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=latin1;',
+  'ALTER TABLE `activity_horsebackRiding`
+    MODIFY `horsebackRiding_id` int(11) NOT NULL AUTO_INCREMENT;',
 
   // 6 - Hiking at Meadowwood Resort
   "INSERT IGNORE INTO `activity_key` (`key_id`, `key_name`, `key_alias`, `key_desc`) VALUES
@@ -128,6 +234,17 @@ $sql_init = array(
       dominated by black oak and more Douglas firs with a tangle of wild rose and bracken fern at their bases.
     </p>'
   );",
+  'CREATE TABLE IF NOT EXISTS `activity_hikingMeadowood` (
+    `hikingMeadowood_id` int(11) NOT NULL,
+    `hikingMeadowood_user` varchar(256) NOT NULL,
+    `hikingMeadowood_choiceNum` varchar(128) DEFAULT NULL,
+    `hikingMeadowood_tour` varchar(128) DEFAULT NULL,
+    `hikingMeadowood_injuries` varchar(128) DEFAULT NULL,
+    `hikingMeadowood_injuryInfo` varchar(1024) DEFAULT NULL,
+    PRIMARY KEY (`hikingMeadowood_id`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=latin1;',
+  'ALTER TABLE `activity_hikingMeadowood`
+    MODIFY `hikingMeadowood_id` int(11) NOT NULL AUTO_INCREMENT;',
 
   // 7 - Hiking at Bothe
   "INSERT IGNORE INTO `activity_key` (`key_id`, `key_name`, `key_alias`, `key_desc`) VALUES
@@ -141,6 +258,18 @@ $sql_init = array(
       wild turkey and many others.
     </p>'
   );",
+ 'CREATE TABLE IF NOT EXISTS `activity_hikingBothe` (
+    `hikingBothe_id` int(11) NOT NULL,
+    `hikingBothe_user` varchar(256) NOT NULL,
+    `hikingBothe_choiceNum` varchar(128) DEFAULT NULL,
+    `hikingBothe_foodRestriction` varchar(128) DEFAULT NULL,
+    `hikingBothe_foodRestrictionInfo` varchar(1024) DEFAULT NULL,
+    `hikingBothe_injuries` varchar(128) DEFAULT NULL,
+    `hikingBothe_injuryInfo` varchar(1024) DEFAULT NULL,
+    PRIMARY KEY (`hikingBothe_id`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=latin1;',
+  'ALTER TABLE `activity_hikingBothe`
+    MODIFY `hikingBothe_id` int(11) NOT NULL AUTO_INCREMENT;',
 
   // 8 - Spa Treatement
   "INSERT IGNORE INTO `activity_key` (`key_id`, `key_name`, `key_alias`, `key_desc`) VALUES
@@ -151,6 +280,20 @@ $sql_init = array(
       honors this year, as well as the first Five-Star spa in the Napa Valley.
     </p>'
   );",
+ 'CREATE TABLE IF NOT EXISTS `activity_spa` (
+    `spa_id` int(11) NOT NULL,
+    `spa_user` varchar(256) NOT NULL,
+    `spa_choiceNum` varchar(128) DEFAULT NULL,
+    `spa_service` varchar(128) DEFAULT NULL,
+    `spa_morning` varchar(128) DEFAULT NULL,
+    `spa_afternoon` varchar(128) DEFAULT NULL,
+    `spa_start` varchar(128) DEFAULT NULL,
+    `spa_injuries` varchar(128) DEFAULT NULL,
+    `spa_injuryInfo` varchar(1024) DEFAULT NULL,
+    PRIMARY KEY (`spa_id`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=latin1;',
+  'ALTER TABLE `activity_spa`
+    MODIFY `spa_id` int(11) NOT NULL AUTO_INCREMENT;',
 
   // 9 - Croquet
   "INSERT IGNORE INTO `activity_key` (`key_id`, `key_name`, `key_alias`, `key_desc`) VALUES
@@ -162,6 +305,16 @@ $sql_init = array(
       Croquet Championships the same year. Gear up in your pristine white sweater and get ready to play!
     </p>'
   );",
+ 'CREATE TABLE IF NOT EXISTS `activity_croquet` (
+    `croquet_id` int(11) NOT NULL,
+    `croquet_user` varchar(256) NOT NULL,
+    `croquet_choiceNum` varchar(128) DEFAULT NULL,
+    `croquet_injuries` varchar(128) DEFAULT NULL,
+    `croquet_injuryInfo` varchar(1024) DEFAULT NULL,
+    PRIMARY KEY (`croquet_id`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=latin1;',
+  'ALTER TABLE `activity_croquet`
+    MODIFY `croquet_id` int(11) NOT NULL AUTO_INCREMENT;',
 
   // 10 - Group Wine Experience
   "INSERT IGNORE INTO `activity_key` (`key_id`, `key_name`, `key_alias`, `key_desc`) VALUES
@@ -176,6 +329,16 @@ $sql_init = array(
       secrets of tasting you can demystify wine and make informed, confident buying decisions.
     </p>'
   );",
+ 'CREATE TABLE IF NOT EXISTS `activity_wine` (
+    `wine_id` int(11) NOT NULL,
+    `wine_user` varchar(256) NOT NULL,
+    `wine_choiceNum` varchar(128) DEFAULT NULL,
+    `wine_foodRestriction` varchar(128) DEFAULT NULL,
+    `wine_foodRestrictionInfo` varchar(1024) DEFAULT NULL,
+    PRIMARY KEY (`wine_id`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=latin1;',
+  'ALTER TABLE `activity_wine`
+    MODIFY `wine_id` int(11) NOT NULL AUTO_INCREMENT;',
 
   // 11 - Group Golf Tournament
   "INSERT IGNORE INTO `activity_key` (`key_id`, `key_name`, `key_alias`, `key_desc`) VALUES
@@ -188,6 +351,20 @@ $sql_init = array(
       aim while the less experienced will appreciate the manageability of the shortened distances.
     </p>'
   );",
+  'CREATE TABLE IF NOT EXISTS `activity_golfTournament` (
+    `golfTournament_id` int(11) NOT NULL,
+    `golfTournament_user` varchar(256) NOT NULL,
+    `golfTournament_choiceNum` varchar(128) DEFAULT NULL,
+    `golfTournament_equipment` varchar(128) DEFAULT NULL,
+    `golfTournament_handed` varchar(128) DEFAULT NULL,
+    `golfTournament_handicap` varchar(128) DEFAULT NULL,
+    `golfTournament_average` varchar(128) DEFAULT NULL,
+    `golfTournament_injuries` varchar(128) DEFAULT NULL,
+    `golfTournament_injuryInfo` varchar(1024) DEFAULT NULL,
+    PRIMARY KEY (`golfTournament_id`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=latin1;',
+  'ALTER TABLE `activity_golfTournament`
+    MODIFY `golfTournament_id` int(11) NOT NULL AUTO_INCREMENT;',
 
   // 12 - Mixology Experience
   "INSERT IGNORE INTO `activity_key` (`key_id`, `key_name`, `key_alias`, `key_desc`) VALUES
@@ -200,6 +377,16 @@ $sql_init = array(
       fresh herbs and edible flowers into your drinks. 
     </p>'
   );",
+ 'CREATE TABLE IF NOT EXISTS `activity_mixology` (
+    `mixology_id` int(11) NOT NULL,
+    `mixology_user` varchar(256) NOT NULL,
+    `mixology_choiceNum` varchar(128) DEFAULT NULL,
+    `mixology_foodRestriction` varchar(128) DEFAULT NULL,
+    `mixology_foodRestrictionInfo` varchar(1024) DEFAULT NULL,
+    PRIMARY KEY (`mixology_id`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=latin1;',
+  'ALTER TABLE `activity_mixology`
+    MODIFY `mixology_id` int(11) NOT NULL AUTO_INCREMENT;',
 
   // 13 - Golf Studio Experience
   "INSERT IGNORE INTO `activity_key` (`key_id`, `key_name`, `key_alias`, `key_desc`) VALUES
@@ -213,6 +400,20 @@ $sql_init = array(
       of player development services including club fitting with top golf club manufacturers, swing analyses 
       and review, and special competitions including Closest to the Hole and Long Drive challenges.
     </p>'
-  );"
+  );",
+    'CREATE TABLE IF NOT EXISTS `activity_golfStudio` (
+    `golfStudio_id` int(11) NOT NULL,
+    `golfStudio_user` varchar(256) NOT NULL,
+    `golfStudio_choiceNum` varchar(128) DEFAULT NULL,
+    `golfStudio_equipment` varchar(128) DEFAULT NULL,
+    `golfStudio_handed` varchar(128) DEFAULT NULL,
+    `golfStudio_handicap` varchar(128) DEFAULT NULL,
+    `golfStudio_average` varchar(128) DEFAULT NULL,
+    `golfStudio_injuries` varchar(128) DEFAULT NULL,
+    `golfStudio_injuryInfo` varchar(1024) DEFAULT NULL,
+    PRIMARY KEY (`golfStudio_id`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=latin1;',
+  'ALTER TABLE `activity_golfStudio`
+    MODIFY `golfStudio_id` int(11) NOT NULL AUTO_INCREMENT;'
 );
 

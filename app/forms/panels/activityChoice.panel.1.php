@@ -6,28 +6,26 @@
 	<div class="row">
 		<div class="col-sm-5 col-sm-push-7">
 			<div class="alert alert-info">
-				<p>
-					<p><strong>Suggested Attire:</strong></p>
-					<ul class="thin-text">
-						<li>Light Layers</li>
-						<li>Flat, Closed-toe Shoes</li>
-						<li>Sunglasses</li>
-						<li>Sunscreen</li>
-						<li>Hat</li>
-					</ul>
-				</p>
-				<p>
-					<p><strong>Duration:</strong></p>
-					<ul>
-						<li>Pick-up is at 6:00 am</li>
-						<li>4.5 hours total</li>
-						<li>Approximate 1-hour flight over the Napa Valley</li>
-					</ul>
-				</p>
-				<p>
-					<p><strong>Transportation:</strong></p>
-					<p>Roundtrip transportation provided</p>
-				</p>
+
+				<h5>Suggested Attire:</h5>
+				<ul class="thin-text">
+					<li>Light Layers</li>
+					<li>Flat, Closed-toe Shoes</li>
+					<li>Sunglasses</li>
+					<li>Sunscreen</li>
+					<li>Hat</li>
+				</ul>
+
+				<h5>Duration:</h5>
+				<ul class="thin-text">
+					<li>Pick-up is at 6:00 am</li>
+					<li>4.5 hours total</li>
+					<li>Approximate 1-hour flight over the Napa Valley</li>
+				</ul>
+
+				<h5>Transportation:</h5>
+				<p class="thin-text">Roundtrip transportation provided</p>
+
 			</div>
 		</div>
 		<div class="col-sm-7 col-sm-pull-5">
@@ -63,27 +61,55 @@
 	</div>
 
 	<hr class='activities'>
-		<h2>Health/Injuries</h2>
-		<p>
-			Do you have any Injuries?
-		</p>
-		<div class="radio">
-		  <label>
-		    <input type="radio" name="balloon_injuries" class="balloon_injuries" value="no" dependentValue="false" checked>
-		    No
-		  </label>
+	<div class="row">
+		<div class="col-sm-12"><h2>Health/Injuries</h2></div>
+		<div class="col-sm-6">
+			<p>
+				Do you have any Injuries?
+			</p>
+			<div class="radio">
+				<label>
+					<input type="radio" name="balloon_injuries" class="balloon_injuries" value="no" dependentValue="false" checked>
+					No
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="balloon_injuries" class="balloon_injuries" value="yes" dependentValue="true" >
+					Yes
+				</label>
+			</div>
+			<br	/>
+			<p>
+				If Yes, please list any injuries that you have.
+				<br>
+			</p>
+			<textarea dependentOn="balloon_injuries" name="balloon_injuryInfo" id="balloon_injuryInfo" class="form-control" rows="5" 
+			placeholder="Required if you said yes to injuries"></textarea>
 		</div>
-		<div class="radio">
-		  <label>
-		    <input type="radio" name="balloon_injuries" class="balloon_injuries" value="yes" dependentValue="true" >
-		    Yes
-		  </label>
+		<div class="col-sm-6">
+			<p>
+				Do you have any food allergies or dietary restrictions?
+			</p>
+			<div class="radio">
+				<label>
+					<input type="radio" name="balloon_foodRestriction" class="balloon_foodRestriction" value="no" dependentValue="false" checked>
+					No
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="balloon_foodRestriction" class="balloon_foodRestriction" value="yes" dependentValue="true" >
+					Yes
+				</label>
+			</div>
+			<br	/>
+			<p>
+				If Yes, please list any food restrictions or allergies you have.
+				<br>
+			</p>
+			<textarea dependentOn="balloon_foodRestriction" name="balloon_foodRestrictionInfo" id="balloon_foodRestrictionInfo" class="form-control" rows="5" 
+			placeholder="Required if you said yes to food restrictions or allergies"></textarea>
 		</div>
-		<p>
-			If Yes, please list any injuries that you have.
-			<br>
-		</p>
-		<textarea dependentOn="balloon_injuries" name="balloon_injuryInfo" id="balloon_injuryInfo" class="form-control" rows="5" 
-		placeholder="Required if you said yes to injuries"></textarea>
 	</div>
 </div>
