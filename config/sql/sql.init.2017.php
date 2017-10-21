@@ -71,6 +71,7 @@ $sql_init = array(
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;',
     
   // activity key (make sure to mark your paragraphs in key_desc)
+  'DROP TABLE IF EXISTS `activity_key`', // make sure data in table is accurate
   'CREATE TABLE IF NOT EXISTS `activity_key` (
     `key_id` int(11) NOT NULL,
     `key_name` varchar(128) NOT NULL,
@@ -80,11 +81,10 @@ $sql_init = array(
   ) ENGINE=InnoDB DEFAULT CHARSET=latin1;',
   'ALTER TABLE `activity_key`
     MODIFY `key_id` int(11) NOT NULL AUTO_INCREMENT;',
-  'TRUNCATE TABLE `activity_key`', // make sure data in table is accurate
 
   // 0 - no activity 
   "INSERT IGNORE INTO `activity_key` (`key_id`, `key_name`, `key_alias`, `key_desc`) VALUES
-  (0, 'No Activity', 'noactivity', 'nothing to see')",
+  (0, 'No Activity', 'noactivity', 'nothing to see');",
   
   // 1 - Hot Air Balloon
   "INSERT IGNORE INTO `activity_key` (`key_id`, `key_name`, `key_alias`, `key_desc`) VALUES
