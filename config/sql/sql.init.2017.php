@@ -279,29 +279,29 @@ $sql_init = array(
   'ALTER TABLE `activity_hikingBothe`
     MODIFY `hikingBothe_id` int(11) NOT NULL AUTO_INCREMENT;',
 
-  // 8 - Spa Treatement
+  // 8 - spaMeadowood Treatement
   "INSERT IGNORE INTO `activity_key` (`key_id`, `key_name`, `key_alias`, `key_desc`) VALUES
-  (8, 'Spa Treatment', 'spa',
+  (8, 'spaMeadowood Treatment', 'spaMeadowood',
     '<p>
-      The Meadowood Spa has won the hospitality industry’s highest honor of Five-Stars from the Forbes Travel Guide 
-      just fifteen months after opening its doors in November 2015.  It is one of nine spas to have achieved Five-Star 
-      honors this year, as well as the first Five-Star spa in the Napa Valley.
+      The Meadowood spaMeadowood has won the hospitality industry’s highest honor of Five-Stars from the Forbes Travel Guide 
+      just fifteen months after opening its doors in November 2015.  It is one of nine spaMeadowoods to have achieved Five-Star 
+      honors this year, as well as the first Five-Star spaMeadowood in the Napa Valley.
     </p>'
   );",
- 'CREATE TABLE IF NOT EXISTS `activity_spa` (
-    `spa_id` int(11) NOT NULL,
-    `spa_user` varchar(256) NOT NULL,
-    `spa_choiceNum` varchar(128) DEFAULT NULL,
-    `spa_service` varchar(128) DEFAULT NULL,
-    `spa_morning` varchar(128) DEFAULT NULL,
-    `spa_afternoon` varchar(128) DEFAULT NULL,
-    `spa_start` varchar(128) DEFAULT NULL,
-    `spa_injuries` varchar(128) DEFAULT NULL,
-    `spa_injuryInfo` varchar(1024) DEFAULT NULL,
-    PRIMARY KEY (`spa_id`)
+ 'CREATE TABLE IF NOT EXISTS `activity_spaMeadowood` (
+    `spaMeadowood_id` int(11) NOT NULL,
+    `spaMeadowood_user` varchar(256) NOT NULL,
+    `spaMeadowood_choiceNum` varchar(128) DEFAULT NULL,
+    `spaMeadowood_service` varchar(128) DEFAULT NULL,
+    `spaMeadowood_morning` varchar(128) DEFAULT NULL,
+    `spaMeadowood_afternoon` varchar(128) DEFAULT NULL,
+    `spaMeadowood_start` varchar(128) DEFAULT NULL,
+    `spaMeadowood_injuries` varchar(128) DEFAULT NULL,
+    `spaMeadowood_injuryInfo` varchar(1024) DEFAULT NULL,
+    PRIMARY KEY (`spaMeadowood_id`)
   ) ENGINE=InnoDB DEFAULT CHARSET=latin1;',
-  'ALTER TABLE `activity_spa`
-    MODIFY `spa_id` int(11) NOT NULL AUTO_INCREMENT;',
+  'ALTER TABLE `activity_spaMeadowood`
+    MODIFY `spaMeadowood_id` int(11) NOT NULL AUTO_INCREMENT;',
 
   // 9 - Croquet
   "INSERT IGNORE INTO `activity_key` (`key_id`, `key_name`, `key_alias`, `key_desc`) VALUES
