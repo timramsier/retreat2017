@@ -69,6 +69,14 @@ $sql_init = array(
   ) ENGINE=InnoDB DEFAULT CHARSET=latin1;',
   'ALTER TABLE `activity_main`
     MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;',
+
+  // activity failed
+  'CREATE TABLE IF NOT EXISTS `activity_failed` (
+    `failed_id` int(11) NOT NULL,
+    `failed_user` varchar(256) DEFAULT NULL,
+    `failed_query` varchar(4096) DEFAULT NULL,
+    PRIMARY KEY (`failed_id`)
+  ) ENGINE=InnoDB DEFAULT CHARSET=latin1;',
     
   // activity key (make sure to mark your paragraphs in key_desc)
   'DROP TABLE IF EXISTS `activity_key`', // make sure data in table is accurate
