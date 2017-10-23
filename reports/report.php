@@ -1,7 +1,7 @@
 <?php
 	include "../config/paths.php";
 	include "../config/database.php";
-	include "./queries.php";
+	include "../config/queries.php";
 	if (isset($_GET['data'])) {
 		$query = $queryList[$_GET['data']]["report"];
 		// print_r($query);die();

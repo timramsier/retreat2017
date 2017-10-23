@@ -29,6 +29,17 @@ $queryList = array(
                 INNER JOIN activity_key c3 ON (activity_main.choice3 = c3.key_id)",
       "description"=>"Includes an overview of what activities each user has selected."),
 
+    "Failed Activity Signup"=>array(
+      "report"=>"SELECT  'Attendee','Access Key','Error'
+                UNION
+                SELECT  CONCAT(activity_main.userFirstName, CONCAT(' ',activity_main.userLastName)),
+                        failed_user,
+                        failed_query
+                FROM activity_failed
+                INNER JOIN activity_main
+                ON              (activity_failed.failed_user = activity_main.hashKey)",
+      "description"=>"This is the error log for activity sign up."),
+
     "Hot Air Balloon Ride"=>array(
       "report"=>"SELECT 'Attendee','Access Key','Choice Number','Experience List','What do you exp',
                         'Food Restriction','Food Restriction Info', 'Injury', 'Injury Info'

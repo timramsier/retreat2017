@@ -1,7 +1,7 @@
 <?php
 	include "../config/paths.php";
 	include "../config/database.php";
-  include "./queries.php";
+  include "../config/queries.php";
 ?>
 
 <html>
