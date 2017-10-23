@@ -22,6 +22,8 @@
 		<div class="report-controls">
 			<a class="btn btn-default" onClick="window.history.back()">Back</a>
 			<a class="btn btn-default" onClick="copyElementContents(document.getElementById('report-table'));">Copy Table</a>
+      <a class="btn btn-default" download="<?=preg_replace('/\s+/', '', urldecode($_GET['data'])) ?>.csv" 
+				href="#" onclick="return ExcellentExport.csv(this, 'report-table');">Export to CSV</a>
 		</div>
 		<div class='table-wrapper'>
 			<table class="report-table" id='report-table'>
@@ -39,3 +41,4 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/public/js/universal.functions.js"></script>
+<script type="text/javascript" src="/public/js/excellentexport.js"></script>
