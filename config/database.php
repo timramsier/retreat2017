@@ -1,5 +1,4 @@
 <?php
-include 'sql/sql.init.2017.php';
 //============================================================
 //				Create connection credentials
 //============================================================
@@ -23,11 +22,4 @@ if($mysqli->connect_error){
 	exit();
 }
 
-foreach ($sql_init as $key => $query) {
-	if(!$mysqli->query($query)) {
-		printf("Initialization failed: %s\n", $mysqli->connect_error);
-		printf($query);
-		exit();
-	}
-}
 // die();
