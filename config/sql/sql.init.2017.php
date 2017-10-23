@@ -281,7 +281,7 @@ $sql_init = array(
 
   // 8 - spaMeadowood Treatement
   "INSERT IGNORE INTO `activity_key` (`key_id`, `key_name`, `key_alias`, `key_desc`) VALUES
-  (8, 'spaMeadowood Treatment', 'spaMeadowood',
+  (8, 'Spa Treatment', 'spaMeadowood',
     '<p>
       The Meadowood spaMeadowood has won the hospitality industry’s highest honor of Five-Stars from the Forbes Travel Guide 
       just fifteen months after opening its doors in November 2015.  It is one of nine spaMeadowoods to have achieved Five-Star 
