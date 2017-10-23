@@ -20,7 +20,7 @@
             "'><div class='icon'><i class='fa fa-3x fa-th-list' aria-hidden='true'></i></div><h2>"
             .$key.
             "</h2><p>"
-            .$descriptionList[$key].
+            .$queryList[$key]["description"].
             "</p></a>";
           }
         ?>

@@ -25,7 +25,7 @@
 
 			<h2>Instruction:</h2>
 			<p>
-				What is your referred instruction with the Head Pro?
+				What is your preferred instruction with the Head Pro?
 			</p>
 			<div class="radio">
 				<label>
