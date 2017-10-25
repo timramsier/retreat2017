@@ -118,13 +118,13 @@ $queryList = array(
       "description"=>"Includes a list of users who chose this activity and the answers to their questions"),
 
     "Spa Treatment"=>array(
-      "report"=>"SELECT 'Attendee','Access Key','Choice Number','Service','Morning Pref','Afternoon Pref',
+      "report"=>"SELECT 'Attendee','Access Key','Choice Number','Service','Morning or Afternoon',
                         'Prefered Start','Prefer Male','Prefer Female','Injury','Injury Info'
                 UNION
                 SELECT CONCAT(activity_main.userFirstName, CONCAT(' ',activity_main.userLastName)),
-                        spaMeadowood_user,spaMeadowood_choiceNum,spaMeadowood_service,spaMeadowood_morning,
-                        spaMeadowood_afternoon,spaMeadowood_start,spaMeadowood_preferMale,
-                        spaMeadowood_preferFemale,spaMeadowood_injuries,spaMeadowood_injuryInfo
+                        spaMeadowood_user,spaMeadowood_choiceNum,spaMeadowood_service,spaMeadowood_prefTime,
+                        spaMeadowood_start,spaMeadowood_preferMale,spaMeadowood_preferFemale,
+                        spaMeadowood_injuries,spaMeadowood_injuryInfo
                 FROM activity_spaMeadowood
                 INNER JOIN activity_main ON (activity_spaMeadowood.spaMeadowood_user = activity_main.hashKey)",
       "description"=>"Includes a list of users who chose this activity and the answers to their questions"),

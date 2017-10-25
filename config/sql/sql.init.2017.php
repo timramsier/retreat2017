@@ -283,7 +283,7 @@ $sql_init = array(
   "INSERT IGNORE INTO `activity_key` (`key_id`, `key_name`, `key_alias`, `key_desc`) VALUES
   (8, 'Spa Treatment', 'spaMeadowood',
     '<p>
-      The Meadowood spa has won the hospitality industry’s highest honor of Five-Stars from the Forbes Travel Guide 
+      The Meadowood Spa has won the hospitality industry’s highest honor of Five-Stars from the Forbes Travel Guide 
       just fifteen months after opening its doors in November 2015.  It is one of nine spas to have achieved Five-Star 
       honors this year, as well as the first Five-Star spa in the Napa Valley.
     </p>'
@@ -293,8 +293,7 @@ $sql_init = array(
     `spaMeadowood_user` varchar(256) NOT NULL,
     `spaMeadowood_choiceNum` varchar(128) DEFAULT NULL,
     `spaMeadowood_service` varchar(128) DEFAULT NULL,
-    `spaMeadowood_morning` varchar(128) DEFAULT NULL,
-    `spaMeadowood_afternoon` varchar(128) DEFAULT NULL,
+    `spaMeadowood_prefTime` varchar(128) DEFAULT NULL,
     `spaMeadowood_start` varchar(128) DEFAULT NULL,
     `spaMeadowood_preferMale` varchar(128) DEFAULT NULL,
     `spaMeadowood_preferFemale` varchar(128) DEFAULT NULL,
