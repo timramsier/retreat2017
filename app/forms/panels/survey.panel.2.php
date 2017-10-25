@@ -16,15 +16,15 @@
 <div class="col-sm-6">
   <div class="form-group">
     <label for="eaOfficePhone">EA's Office Phone <small><em>(Required)</em></small></label>
-    <input type="text" name="eaOfficePhone" class="form-control input-sm required bfh-phone" id="eaOfficePhone" data-format="+1 (ddd) ddd-dddd"
+    <input type="text" name="eaOfficePhone" class="form-control input-sm required " id="eaOfficePhone" placeholder="Required" 
     				value=<?php if (isset($_GET["eaOfficePhone"])) {echo "'" . urldecode($_GET["eaOfficePhone"]) . "'";} ?>>
   </div>
 </div>
 <div class="col-sm-6">
   <div class="form-group">
     <label for="eaMobilePhone">EA's Mobile Phone <small><em>(Optional)</em></small></label>
-    <input type="text" name="eaMobilePhone" class="form-control input-sm bfh-phone" id="eaMobilePhone" data-format="+1 (ddd) ddd-dddd"
-    				value=<?php if (isset($_GET["eaMobilePhone"])) {echo "'" . urldecode($_GET["eaMobilePhone"]) . "'";} ?>>
+    <input type="text" name="eaMobilePhone" class="form-control input-sm " id="eaMobilePhone" placeholder="Optional" 
+    				 value=<?php if (isset($_GET["eaMobilePhone"])) {echo "'" . urldecode($_GET["eaMobilePhone"]) . "'";} ?>>
   </div>
 </div>
 <!-- <div class="col-sm-6 hidden-xs" style="height:52px;margin-bottom:15px;"></div> -->
@@ -37,8 +37,8 @@
   </div>
   <div class="form-group">
     <label for="emergancyPhone">Emergency Contact Phone <small><em>(Required)</em></small></label>
-    <input type="text" name="emergencyPhone" class="form-control input-sm required bfh-phone" id="emergencyPhone" data-format="+1 (ddd) ddd-dddd"
-    				value=<?php if (isset($_GET["emergencyPhone"])) {echo "'" . urldecode($_GET["emergencyPhone"]) . "'";} ?>>
+    <input type="text" name="emergencyPhone" class="form-control input-sm required " id="emergencyPhone" placeholder="Required" 
+    				data-country="country" value=<?php if (isset($_GET["emergencyPhone"])) {echo "'" . urldecode($_GET["emergencyPhone"]) . "'";} ?>>
   </div>
 </div>
 

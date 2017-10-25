@@ -12,28 +12,32 @@ if (!$validAccess) {
   header('Location:.?view=access');
 }
 
+// create an array for all of the activity types
+$query1 = "SELECT * FROM activity_key";
+$results = $mysqli->query($query1);
+$activityTypes = [];
+while ($row = $results->fetch_assoc()) {
+  if ($row['key_name'] !== 'No Activity') {
+    $activityTypes[] = $row['key_name'];
+  }
+}
 
-
-
+// get the list of activity descriptions
+$query1 = "SELECT * FROM activity_key";
+$results = $mysqli->query($query1);
+$activityDesc = [];
+while ($row = $results->fetch_assoc()) {
+  $activityDesc[] = $row['key_desc'];
+}
 
 // get the list of activities
 $query1 = "SELECT * FROM activity_key";
 $results = $mysqli->query($query1);
 
-// create an array for all of the activity types
-$activityTypes = array(
-  'Skiing',
-  'Snowboarding',
-  'Snow-Shoeing',
-  'Dog Sledding',
-  'Ice Skating',
-  'Trap & Skeet Shooting',
-  'Fly Fishing',
-  'Hiking',
-  'Aspen Art Tour',
-  'Little Gems Food Tour',
-  'Spa Services '
-);
+echo '<script>
+var activityTypes ='.json_encode($activityTypes).'
+var activityDesc ='.json_encode($activityDesc).'
+</script>';
 
 ?>
 
@@ -57,35 +61,51 @@ $activityTypes = array(
       </div>
 
       <div class="form-panel">
-
           <div class="error-message alert alert-danger" style="display:none;">
             <p>Please make sure that all <strong>Required</strong> fields are completely filled out.</p>
           </div>
         <?php include $PATH['FORMS']."panels/activities.panel.2.php" ?>
       </div>
 
-      <div class="form-panel">
+      <div class="form-panel" id='panel-1'>
           <h3 style="text-align:right;">Your First Selection</h3>
           <div class="error-message alert alert-danger" style="display:none;">
             <p>Please make sure that all <strong>Required</strong> fields are completely filled out.</p>
           </div>
-          <div id='activityChoice1'></div>
+          <div class="activityDescription">
+            <h1 class='title'></h1>
+            <span class='text'></span>
+          </div>
+          <div id='activityChoice1'>
+          </div>
       </div>
 
-      <div class="form-panel">
+      <div class="form-panel" id='panel-2'>
           <h3 style="text-align:right;">Your Second Selection</h3>
           <div class="error-message alert alert-danger" style="display:none;">
             <p>Please make sure that all <strong>Required</strong> fields are completely filled out.</p>
           </div>
-          <div id='activityChoice2'><?php include $PATH['FORMS']."panels/activityChoice.panel.null.php" ?></div>
+          <div class="activityDescription">
+            <h1 class='title'></h1>
+            <span class='text'></span>
+          </div>
+          <div id='activityChoice2'>
+            <?php include $PATH['FORMS']."panels/activityChoice.panel.null.php" ?>
+          </div>
       </div>
 
-      <div class="form-panel">
+      <div class="form-panel" id='panel-3'>
         <h3 style="text-align:right;">Your Third Selection</h3>
           <div class="error-message alert alert-danger" style="display:none;">
             <p>Please make sure that all <strong>Required</strong> fields are completely filled out.</p>
           </div>
-          <div id='activityChoice3'><?php include $PATH['FORMS']."panels/activityChoice.panel.null.php" ?></div>
+          <div class="activityDescription">
+            <h1 class='title'></h1>
+            <span class='text'></span>
+          </div>
+          <div id='activityChoice3'>
+            <?php include $PATH['FORMS']."panels/activityChoice.panel.null.php" ?>
+          </div>
       </div>
 
     </div>

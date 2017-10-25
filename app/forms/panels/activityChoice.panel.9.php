@@ -1,22 +1,51 @@
-<a href="./public/img/artgallery.jpg" style="background-image:url(./public/img/artgallery.jpg)" class="updateBackground"></a>
-<input type="hidden" class="choiceNum" name="artGallery_choiceNum">
-<div class="activityDescription">
-	<h1>Aspen Art Tour</h1>
-	<p>
-		Join us a walking tour inside Aspen’s two most significant art galleries – the Aspen Art Museum 
-		and the Aspen Art Gallery.  Your knowledge docent will escort you through both venues, while providing 
-		information and thought-provoking questions on interpreting and experiencing the collections.  
-		The Aspen Art Museum is a non-collecting institution presenting the newest, most important evolutions 
-		in international contemporary art. Their innovative and timely exhibitions, education and public programs, 
-		immersive activities, and community happenings actively engage audiences in thought-provoking experiences 
-		of art, culture, and society.  Damian Guillot, owner of the Aspen Art gallery, has an eclectic eye and hand 
-		picks each piece displayed in his gallery.  From local to world renowned, come see beautiful works of art 
-		by Isabelle Dupuy, Marco Grassi, Sherri Mignonne, David Gonzalez, a few of the many featured tableau’s 
-		at the Aspen Art Gallery.  Spend some time strolling through the galleries of this architectural landmark of Aspen!
-	</p>
-	<br>
-	<br>
-	<p><em>Note: there is no need to fill anything out for this activity</em></p>
-	<br>
-	<br>
+<a href="./public/img/croquet.jpg" style="background-image:url(./public/img/croquet.jpg)" class="updateBackground"></a>
+<input type="hidden" class="choiceNum" name="croquet_choiceNum">
+<div class="activityInputs">
+	<hr class='activities'>
+	<h2>Equipment:</h2>
+	<div class="row">
+		<div class="col-sm-5 col-sm-push-7">
+			<div class="alert alert-info">
+				<h5>Required Attire:</h5>
+				<ul class="thin-text">
+					<li>White collared shirt for men</li>
+					<li>White shirt for women</li>
+					<li>White or light beige pants or shorts</li>
+					<li>Flat-soled shoes ONLY (no wedges)</li>
+				</ul>
+				<h5>Duration:</h5>
+				<ul class="thin-text">
+          <li>1-hour lesson is available</li>
+          <li>20-minute rounds</li>
+        </ul> 
+				<h5>Transportation:</h5>
+				<p class="thin-text">On property</p>
+			</div>
+		</div>
+		<div class="col-sm-7 col-sm-pull-5">
+      <h3>Each participant will be provided with mallets and balls.</h3>
+			<h2>Health/Injuries</h2>
+			<p>
+				Do you have any Injuries?
+			</p>
+			<div class="radio">
+				<label>
+					<input type="radio" name="croquet_injuries" class="croquet_injuries" value="no" dependentValue="false" checked>
+					No
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="croquet_injuries" class="croquet_injuries" value="yes" dependentValue="true" >
+					Yes
+				</label>
+			</div>
+			<p>
+				If Yes, please list any injuries that you have.
+				<br>
+			</p>
+			<textarea dependentOn="croquet_injuries" name="croquet_injuryInfo" id="croquet_injuryInfo" class="form-control" rows="5" 
+			placeholder="Required if you said yes to injuries"></textarea>
+		</div>
+	</div>
 </div>

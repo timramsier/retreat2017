@@ -8,7 +8,13 @@
 	</h3>
  
 	<p class="text-column-2">
-		<?php	foreach ($activityTypes as $activity) {echo "$activity<br>";}?>
+		<?php	foreach ($activityTypes as $key=>$activity) {
+			if ($activity !== 'No Activity') {
+				echo "<span data-toggle='tooltip' data-placement='top' title='"
+				.strip_tags($activityDesc[$key + 1]).
+				"'>$activity</span><br>";
+			}
+		}?>
 	</p>
 
 </div>
@@ -60,7 +66,7 @@
 		</div>			
 
 	</div>
-	<div class="col-sm-6">
+	<!-- <div class="col-sm-6">
 		<div class="alert alert-warning">
 			If weather conditions are not suitable for the activity/ies of your choosing, other activities will be offered.  
 			Thanks for your understanding.
@@ -91,8 +97,5 @@
 	    <input name="afternoon" type="checkbox" value="afternoon">
 	    Afternoon (approximately 2:00 pm – 5:00 pm)
 	  </label>
-	</div>
+	</div> -->
 </div>
-
-
-

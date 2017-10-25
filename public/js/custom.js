@@ -97,12 +97,12 @@ $('.multi-form .form-panel-button').on('click',function(){
         clickEvent              = $(this),
         dependentInputs         = $("[dependentOn]"),
         defaultIMG              = "./public/img/aspen_01.jpg";
+        pairedInputs            = $("div[data-index=" + selectedPanel + "] [pairWith]");
     $('.success-message').hide();
     $('.error-message').hide();
 
     if ($(this).attr('data-toggle') === 'next' || $(this).attr('data-toggle') === 'submit') {
         $('.has-error').removeClass('has-error')
-
         for (var i = requiredFormElements.length -1; i >= 0; i--){
             if ((requiredFormElements[i].value === '' || requiredFormElements[i].value === "null") && $(requiredFormElements[i]).is(":visible")) {
                 $("input[name=" + requiredFormElements[i].name + "]").parent().addClass("has-error");
@@ -142,14 +142,24 @@ $('.multi-form .form-panel-button').on('click',function(){
             if (controlInput.attr("dependentValue") === "true") { 
                 // validate 
                 if (dependentInputs[i].value === '' || dependentInputs[i].value === "null") {
+
                     $("[name=" + dependentInputs[i].name + "]").parent().addClass("has-error")
                     $("[name=" + dependentInputs[i].name + "]").addClass("has-error")
-                    $("[name=" + $("[name=" + dependentInputs[i].name + "]").attr("dependentOn") + "]").parent().parent().addClass("has-error")
-                formContinue = false;
+                    // $("[name=" + $("[name=" + dependentInputs[i].name + "]").attr("dependentOn") + "]").parent().parent().addClass("has-error")
+                    formContinue = false;
                 } 
             } 
         };
 
+        // validate pair inputs (one must be true) only works with text
+
+        pairedInputs.each(function() {
+            var pairInput = document.getElementById($(this).attr('pairWith'));
+            if (pairInput.value.length < 1 && this.value.length < 1) {
+                $(pairInput).parent().addClass("has-error")
+                formContinue = false;
+            }
+        });
         
         if (formContinue !== false) {       
             if ($(this).attr('data-toggle') === 'next' ) {
@@ -207,58 +217,62 @@ $('.multi-form .form-panel-button').on('click',function(){
 
 
 // Form interaction
-$(window).on('load',function(){
-    $('.origin-toggle').hide();
-    $('#flightType').val('Corporate Jet');
-    $('option[value="Corporate Jet"]').prop('disabled',false);
-    $('option[value="Corporate Jet"]').show();
-    $('#originNY').val("Yes");
-    $('.origin-toggle').find('input').val('null');
-    $('.origin-toggle').find('textarea').val('null');
+// $(window).on('load',function(){
+//     $('.origin-toggle').hide();
+//     // $('#flightType').val('Corporate Jet');
+//     // $('option[value="Corporate Jet"]').prop('disabled',false);
+//     // $('option[value="Corporate Jet"]').show();
+//     // $('#originNY').val("Yes");
+//     $('.origin-toggle').find('input').val('null');
+//     $('.origin-toggle').find('textarea').val('null');
 
-})
-
-
-$('#originNY').change(function(){
-    if ($(this).val() === "No") {
-        $('.origin-toggle').show();
-        $('.origin-toggle').find('input').val('');
-        $('.origin-toggle').find('textarea').val('');
-        $('#flightType').val('Commerical');
-        $('option[value="Corporate Jet"]').prop('disabled',true);
-        $('option[value="Corporate Jet"]').hide();
-    }
-    if ($(this).val() === "Yes") {
-        $('.origin-toggle').hide();
-        $('.origin-toggle').find('input').val('null');
-        $('.origin-toggle').find('textarea').val('null');
-        $('#flightType').val('Corporate Jet');
-        $('option[value="Corporate Jet"]').prop('disabled',false);
-        $('option[value="Corporate Jet"]').show();
-    }
-})
+// })
 
 
-$("#private-note").hide();
+// $('#originNY').change(function(){
+//     if ($(this).val() === "No") {
+//         $('.origin-toggle').show();
+//         $('.origin-toggle').find('input').val('');
+//         $('.origin-toggle').find('textarea').val('');
+//         $('#flightType').val('Commerical');
+//         $('option[value="Corporate Jet"]').prop('disabled',true);
+//         $('option[value="Corporate Jet"]').hide();
+//     }
+//     if ($(this).val() === "Yes") {
+//         $('.origin-toggle').hide();
+//         $('.origin-toggle').find('input').val('null');
+//         $('.origin-toggle').find('textarea').val('null');
+//         $('#flightType').val('Corporate Jet');
+//         $('option[value="Corporate Jet"]').prop('disabled',false);
+//         $('option[value="Corporate Jet"]').show();
+//     }
+// })
 
-$('#flightType').change(function(){
-    if ($(this).val() === "Commerical") {
-        $("#private-note").hide();
-    }
-    if ($(this).val() === "Private") {
-        $("#private-note").show();
-    }
-})
+
+// $("#private-note").hide();
+
+// $('#flightType').change(function(){
+//     if ($(this).val() === "Commerical") {
+//         $("#private-note").hide();
+//     }
+//     if ($(this).val() === "Private") {
+//         $("#private-note").show();
+//     }
+// })
 
 
-$('#originNY').change(function(){
-    if ($(this).val() === "No") {
-        $("#origin-note").hide();
-    }
-    if ($(this).val() === "Yes") {
-        $("#origin-note").show();
-        $("#private-note").hide();
-    }
-})
+// $('#originNY').change(function(){
+//     if ($(this).val() === "No") {
+//         $("#origin-note").hide();
+//     }
+//     if ($(this).val() === "Yes") {
+//         $("#origin-note").show();
+//         $("#private-note").hide();
+//     }
+// })
 
+// optin to tooltips
+$(function() {
+  $('[data-toggle="tooltip"]').tooltip();
+});
 

@@ -1,53 +1,115 @@
-<a href="./public/img/spa.jpg" style="background-image:url(./public/img/spa.jpg)" class="updateBackground"></a>
-<input type="hidden" class="choiceNum" name="spa_choiceNum">
-<div class="activityDescription">
-	<h1>Spa Services</h1>
-	<p>
-		Voted #1 Spa in the World by Travel + Leisure, embark on a relaxing journey at the Remède Asp Spa located at the St. 
-		Regis Aspen. Indulge in a service that pampers! Before and/or after your service take advantage of the spa’s amenities, 
-		including the plunge pools, steam room, oxygen lounge, and complimentary champagne and nibbles.
-	</p>
-</div>
-<br>
+<a href="./public/img/golf.jpg" style="background-image:url(./public/img/golf.jpg)" class="updateBackground"></a>
+<input type="hidden" class="choiceNum" name="golfTournament_choiceNum">
 <div class="activityInputs">
 	<hr class='activities'>
-	<p>
-			Please select the top two services you are interested in receiving.
-	</p>
+	<h2>Equipment:</h2>
 	<div class="row">
-		<div class="col-sm-6 select-group" id="spaChoiceGroup">
+		<div class="col-sm-5 col-sm-push-7">
+			<div class="alert alert-info">
 
-			<div class="form-group">
-				<div class="row">
-					<div class="col-sm-2">
-						<label for="spa_choice1">1st</label>
-					</div>
-					<div class="col-sm-10">
-						<select class='form-control required' name="spa_choice1" id="spa_choice1">
-								<option value="null">- Please Select One -</option>
-				  			<option value="massage">Full Body Massage</option>
-				  			<option value="facial">Facial</option>
-				  			<option value="manicure">Manicure</option>
-				  			<option value="pedicure">Pedicure</option>
-					  </select>
-					</div>
-				</div>
-			</div>	
+				<h5>Required Attire:</h5>
+				<ul class="thin-text">
+					<li>Traditional Golf attire is required</li>
+					<li>For men: collared shirt, walking shorts or pants</li>
+					<li>For women: collared shirt or shirt with sleeves, walking shorts or pants</li>
+					<li>Golf shoes or tennis shoes only</li>
+				</ul>
 
+				<h5>Suggested Attire:</h5>
+				<ul class="thin-text">
+					<li>Sunglasses</li>
+					<li>Sunscreen</li>
+					<li>Hat</li>
+					<li>Bug Spray</li>
+				</ul>
+
+				<h5>Shootout Includes:</h5>
+				<ul class="thin-text">
+					<li>9 holes: shotgun start or tee times</li>
+					<li>Pairings (if needed)</li>
+					<li>Closest to he Hole contest</li>
+					<li>Tournament scoring</li>
+					<li>Bag tags for each player</li>
+				</ul>
+
+				<h5>Transportation:</h5>
+				<p class="thin-text">On property</p>
+			</div>
+		</div>
+		<div class="col-sm-7 col-sm-pull-5">
+			<h3>
+				Each player will be provided sleeve of balls and clubs if they need them.
+			</h3>
+			<p>
+				Are you bringing your own golf clubs?
+			</p>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="golfTournament_equipment" id="golfTournament_equipment" value="bringing own" checked>
+			    I am bringing my own
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="golfTournament_equipment" id="golfTournament_equipment" value="need to rent">
+			    I need to rent
+			  </label>
+			</div>
+			<p>
+				Do you play left or right handed?
+			</p>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="golfTournament_handed" id="golfTournament_handed" value="right-handed" checked>
+			    I play right-handed
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="golfTournament_handed" id="golfTournament_handed" value="left-handed">
+			    I play left-handed
+			  </label>
+			</div>
+			<br>
+			<h2>Experience:</h2>
+			<p>Let us know your experience with playing golf.  (must answer one)</p>
 			<div class="form-group">
-				<div class="row">
-					<div class="col-sm-2">
-						<label for="spa_choice2">2nd</label>
-					</div>
-					<div class="col-sm-10">
-						<select class='form-control required' name="spa_choice2" id="spa_choice2">
-					  </select>
-					</div>
-				</div>
-			</div>			
+				<label for="golfTournament_average">What is your handicap?</label>
+				<input pairWith="golfTournament_average" id="golfTournament_handicap" name="golfTournament_handicap" type="text" class="form-control" placeholder="Handicap">
+			</div>
+			<div class="form-group">
+				<label for="golfTournament_handicap">What is your average score?</label>
+				<input pairWith="golfTournament_handicap" id="golfTournament_average" name="golfTournament_average" type="text" class="form-control" placeholder="Average">
+			</div>
+		</div>
+	</div>
+
+	<hr class='activities'>
+	<div class="row">
+		<div class="col-sm-6">
+			<h2>Health/Injuries</h2>
+			<p>
+				Do you have any Injuries?
+			</p>
+			<div class="radio">
+				<label>
+					<input type="radio" name="golfTournament_injuries" class="injuries" value="no"  dependentValue="false" checked>
+					No
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="golfTournament_injuries" class="injuries" value="yes" dependentValue="true" >
+					Yes
+				</label>
+			</div>
+			<p>
+				If Yes, please list any injuries that you have.
+				<br>
+			</p>
+			<textarea dependentOn="golfTournament_injuries" name="golfTournament_injuryInfo" id="golfTournament_injuryInfo" class="form-control" rows="5" 
+			placeholder="Required if you said yes to injuries"></textarea>
 		</div>
 	</div>
 
 </div>
-
-<script type="text/javascript">selectGroup("#spaChoiceGroup.select-group select");</script>

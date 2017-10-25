@@ -11,7 +11,6 @@ else
 {
 	define('__ROOT__' , dirname(pathinfo(__FILE__, PATHINFO_DIRNAME)));
 }
-$lms_path = "http://whatsontap.iad.ops.ask.com/lms/"; //Currently Hard Coded
 
 $PATH = array(
 	'CONFIG' 		=> __ROOT__.'/config/',

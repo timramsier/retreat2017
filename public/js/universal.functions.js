@@ -1,9 +1,12 @@
 function validateForm(){
+
     var requiredFormElements    = $(".multi-form .required"),
         phoneInput              = $("div[data-index=" + selectedPanel + "].form-panel .bfh-phone.required"),
         checkBoxes              = $("div[data-index=" + selectedPanel + "].form-panel .checkbox-group.required"),
-        dependentInputs         = $("[dependentOn]");
-        
+        dependentInputs         = $("[dependentOn]"),
+        pairedInputs            = $("[pairWith]"),
+        formContinue            = true;
+    $('.has-error').removeClass('has-error');
     for (var i = requiredFormElements.length -1; i >= 0; i--){
         if ((requiredFormElements[i].value === '' || requiredFormElements[i].value === "null") && $(requiredFormElements[i]).is(":visible")) {
             $("input[name=" + requiredFormElements[i].name + "]").parent().addClass("has-error");
@@ -51,7 +54,19 @@ function validateForm(){
         } 
     };
 
-    return true;
+    // validate pair inputs (one must be true) only works with text
+    pairedInputs.each(function() {
+        var pairInput = document.getElementById($(this).attr('pairWith'));
+        if (pairInput.value.length < 1 && this.value.length < 1) {
+            $(pairInput)
+                .parent()
+                .addClass('has-error');
+        formContinue = false;
+        }
+        // return formContinue;
+    });
+
+    return formContinue;
 }
 
 function crossFadeBG(selectedPanel,panelAdj){
@@ -82,4 +97,27 @@ function close_window() {
   if (confirm("Close Window?")) {
     close();
   }
+}
+
+function copyElementContents(el) {
+  var body = document.body,
+    range,
+    sel;
+  if (document.createRange && window.getSelection) {
+    range = document.createRange();
+    sel = window.getSelection();
+    sel.removeAllRanges();
+    try {
+      range.selectNodeContents(el);
+      sel.addRange(range);
+    } catch (e) {
+      range.selectNode(el);
+      sel.addRange(range);
+    }
+  } else if (body.createTextRange) {
+    range = body.createTextRange();
+    range.moveToElementText(el);
+    range.select();
+  }
+  document.execCommand('Copy');
 }
