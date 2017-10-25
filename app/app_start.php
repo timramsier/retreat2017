@@ -27,6 +27,13 @@ if (isset($_GET['type'])){$type=$_GET['type'];} else {$type='attending';}
 //if URL variable action is not set, default to intro
 if (isset($_GET['action'])){$action=$_GET['action'];}
 
+// sets the notification test based on $type
+if ($type == "activities") {
+	$notificationText = $formTextActivities;
+} else {
+	$notificationText = $formText;
+}
+
 if (isset($action) && $action !== "")  
 {
 	include $PATH['BIN'].$action.".bin.php";
@@ -45,6 +52,7 @@ else
 	if (isset($override)) {
 		include $PATH["OVERRIDES"].$override.".override.php";
 	}
+
 
 	echo '<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>';
 	echo '<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>';
@@ -85,6 +93,7 @@ else
 
 				//Override Header styling
 				if($(".headerOverride").length > 0) {$("header").attr("style",$(".headerOverride").attr("style"))}
+				
 	    </script>
 	';
 

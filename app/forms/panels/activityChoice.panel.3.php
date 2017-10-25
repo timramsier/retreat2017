@@ -45,7 +45,7 @@
 		<div class="col-sm-12"><h2>Health/Injuries</h2></div>
 		<div class="col-sm-6">
 			<p>
-				Do you have any Injuries?
+				Do you have any injuries?
 			</p>
 			<div class="radio">
 				<label>
@@ -85,7 +85,7 @@
 			</div>
 			<br	/>
 			<p>
-				If Yes, please list any food restrictions or allergies you have.
+				If Yes, please list any food allergies or dietary restrictions.
 				<br>
 			</p>
 			<textarea dependentOn="sipNcycle_foodRestriction" name="sipNcycle_foodRestrictionInfo" id="sipNcycle_foodRestrictionInfo" class="form-control" rows="5" 

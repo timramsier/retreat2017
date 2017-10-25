@@ -1,7 +1,7 @@
 <header>
   <div id='welcome'>
     <div class="container">
-      <div class="row">
+      <div class="row header-row">
         <div class="col-sm-4 col-md-3 logo">
           <img class="img-responsive" src=<?php echo $headerLogo; ?>>
         </div>

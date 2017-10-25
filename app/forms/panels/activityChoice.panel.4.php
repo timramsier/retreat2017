@@ -75,7 +75,7 @@
 		<div class="col-sm-6">
 			<h2>Health/Injuries</h2>
 			<p>
-				Do you have any Injuries?
+				Do you have any injuries?
 			</p>
 			<div class="radio">
 				<label>

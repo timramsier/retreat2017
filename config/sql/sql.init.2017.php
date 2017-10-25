@@ -100,7 +100,7 @@ $sql_init = array(
     '<p>
       Start your morning with a breathtaking hot air balloon flight over the glorious Napa 
       Valley. Upon landing you will be transported to the Oxbow Public Market for your brunch 
-      held on the patio of C Casa, served to you along with fresh squeezed orange juice 
+      held on the patio of C Casa restaurant, served to you along with fresh squeezed orange juice 
     and Champagne!
     </p>
     <p>
@@ -180,7 +180,7 @@ $sql_init = array(
 
   // 4 - Tennis
   "INSERT IGNORE INTO `activity_key` (`key_id`, `key_name`, `key_alias`, `key_desc`) VALUES
-  (4, 'Tennis', 'tennis',
+  (4, 'Tennis Instruction', 'tennis',
     '<p>
       Doug King is the resident tennis pro at Meadowood. Founder of Acceleration Tennis, a revolutionary teaching 
       system, King is leading the way in reinterpreting the traditional tennis model, working with players of all 
@@ -279,13 +279,13 @@ $sql_init = array(
   'ALTER TABLE `activity_hikingBothe`
     MODIFY `hikingBothe_id` int(11) NOT NULL AUTO_INCREMENT;',
 
-  // 8 - spaMeadowood Treatement
+  // 8 - Spa Treatement
   "INSERT IGNORE INTO `activity_key` (`key_id`, `key_name`, `key_alias`, `key_desc`) VALUES
   (8, 'Spa Treatment', 'spaMeadowood',
     '<p>
-      The Meadowood spaMeadowood has won the hospitality industry’s highest honor of Five-Stars from the Forbes Travel Guide 
-      just fifteen months after opening its doors in November 2015.  It is one of nine spaMeadowoods to have achieved Five-Star 
-      honors this year, as well as the first Five-Star spaMeadowood in the Napa Valley.
+      The Meadowood spa has won the hospitality industry’s highest honor of Five-Stars from the Forbes Travel Guide 
+      just fifteen months after opening its doors in November 2015.  It is one of nine spas to have achieved Five-Star 
+      honors this year, as well as the first Five-Star spa in the Napa Valley.
     </p>'
   );",
  'CREATE TABLE IF NOT EXISTS `activity_spaMeadowood` (
@@ -296,6 +296,8 @@ $sql_init = array(
     `spaMeadowood_morning` varchar(128) DEFAULT NULL,
     `spaMeadowood_afternoon` varchar(128) DEFAULT NULL,
     `spaMeadowood_start` varchar(128) DEFAULT NULL,
+    `spaMeadowood_preferMale` varchar(128) DEFAULT NULL,
+    `spaMeadowood_preferFemale` varchar(128) DEFAULT NULL,
     `spaMeadowood_injuries` varchar(128) DEFAULT NULL,
     `spaMeadowood_injuryInfo` varchar(1024) DEFAULT NULL,
     PRIMARY KEY (`spaMeadowood_id`)
