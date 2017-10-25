@@ -8,13 +8,13 @@
 			<div class="alert alert-info">
 				<h5>Duration:</h5>
 				<ul class="thin-text">
-					<li>30 minute pre-treatment consultation</li>
-					<li>1 hour pre-treatment</li>
+					<li>30-minute pre-treatment consultation</li>
+					<li>1-hour treatment</li>
 				</ul>
-				<h5>Notes</h5>
+				<h5>Notes:</h5>
 				<ul class="thin-text">
 					<li>Arrive 15 minutes prior to your appointment time</li>
-					<li>Missed spaMeadowood appointments will be billed back directly to you.</li>
+					<li>Missed spa appointments will be billed back directly to you.</li>
 				</ul>
 				<h5>Transportation:</h5>
 				<p class="thin-text">On property</p>
@@ -22,7 +22,7 @@
 		</div>
 		<div class="col-sm-7 col-sm-pull-5">
 			<p>
-				Please select the type of service you are interested i receiving:
+				Please select the type of service you are interested in receiving:
 			</p>
 			<div class="radio">
 			  <label>
@@ -37,7 +37,8 @@
 			  </label>
 			</div>
 			<br>
-			<p>What time of day do you prefer to have a spaMeadowood treatment?</p>
+			<p>What time of day do you prefer to have a spa treatment?</p>
+			<p><em>Spa Hours: Open daily 9:30am – 6:00pm</em></p>
 			<div class="checkbox-group">
 				<div class="checkbox">
 					<label>
@@ -56,6 +57,21 @@
 				<label for="spaMeadowood_start">What is your preferred start time?</label>
 				<input id="spaMeadowood_start" name="spaMeadowood_start" type="text" class="form-control" placeholder="Optional">
 			</div>
+			<p>Do you have a gender preference?</p>
+			<div class="checkbox-group">
+				<div class="checkbox">
+					<label>
+						<input name="spaMeadowood_preferMale" type="checkbox" value="yes">
+						Male
+					</label>
+				</div>
+				<div class="checkbox">
+					<label>
+						<input name="spaMeadowood_preferFemale" type="checkbox" value="yes">
+						Female
+					</label>
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -64,7 +80,7 @@
 		<div class="col-sm-6">
 			<h2>Health/Injuries</h2>
 			<p>
-				Do you have any Injuries?
+				Do you have any injuries?
 			</p>
 			<div class="radio">
 			  <label>

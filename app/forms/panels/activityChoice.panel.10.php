@@ -42,7 +42,7 @@
 				</label>
 			</div>
 			<p>
-				If Yes, please list any food restrictions or allergies you have.
+				If Yes, please list any food allergies or dietary restrictions.
 				<br>
 			</p>
 			<textarea dependentOn="wine_foodRestriction" name="wine_foodRestrictionInfo" id="wine_foodRestrictionInfo" class="form-control" rows="5" 

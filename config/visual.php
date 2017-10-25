@@ -47,7 +47,10 @@ $headerSubText 	= "Come join the rest of the Executive Team in Napa, California!
 // ================================ Form Text =====================================
 
 // this sets the form text at the top of the form
-$formText 			= "The registration deadline Friday, October 27 at 4:00 pm (ET)";
+$formText 								= "The registration deadline Friday, October 27 at 4:00 pm (ET)";
+
+// this sets the form text at the top of the form if form = activities
+$formTextActivities 			= "The registration deadline Friday, November 3 at 4:00 pm (ET)";
 
 
 

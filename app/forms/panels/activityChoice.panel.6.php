@@ -8,7 +8,7 @@
 			<div class="alert alert-info">
 				<h5>Suggested Attire:</h5>
 				<ul class="thin-text">
-					<li>Shoes with tread or Hiking boots</li>
+					<li>Shoes with Tread or Hiking Boots</li>
 					<li>Light Layers</li>
 					<li>Sunglasses</li>
 					<li>Sunscreen</li>
@@ -40,7 +40,7 @@
 			</div>
 			<h2>Health/Injuries</h2>
 			<p>
-				Do you have any Injuries?
+				Do you have any injuries?
 			</p>
 			<div class="radio">
 				<label>

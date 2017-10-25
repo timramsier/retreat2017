@@ -46,6 +46,12 @@ hr.activities{
 	margin: 15px 0;
 }
 
+.header-row {
+	background: rgba(0,0,0,0.4);
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
 p.success-text{
 	padding:0 50px 50px 50px;
 	font-size: 14px;

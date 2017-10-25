@@ -18,6 +18,7 @@
 				<h5>Suggested Attire:</h5>
 				<ul class="thin-text">
 					<li>Sunglasses</li>
+					<li>Golf Glove</li>
 					<li>Sunscreen</li>
 					<li>Hat</li>
 					<li>Bug Spray</li>
@@ -41,7 +42,7 @@
 				Each player will be provided sleeve of balls and clubs if they need them.
 			</h3>
 			<p>
-				Are you bringing your own golf clubs?
+				Will you be bringing your own golf clubs?
 			</p>
 			<div class="radio">
 			  <label>
@@ -56,18 +57,18 @@
 			  </label>
 			</div>
 			<p>
-				Do you play left or right handed?
+				If renting golf clubs, please specify:
 			</p>
 			<div class="radio">
 			  <label>
 			    <input type="radio" name="golfTournament_handed" id="golfTournament_handed" value="right-handed" checked>
-			    I play right-handed
+			    Right-handed
 			  </label>
 			</div>
 			<div class="radio">
 			  <label>
 			    <input type="radio" name="golfTournament_handed" id="golfTournament_handed" value="left-handed">
-			    I play left-handed
+			    Left-handed
 			  </label>
 			</div>
 			<br>
@@ -89,7 +90,7 @@
 		<div class="col-sm-6">
 			<h2>Health/Injuries</h2>
 			<p>
-				Do you have any Injuries?
+				Do you have any injuries?
 			</p>
 			<div class="radio">
 				<label>

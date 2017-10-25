@@ -31,7 +31,7 @@
 		<div class="col-sm-7 col-sm-pull-5">
 			<p>
 				Do you experience any of the following? <br/>
-				<ul style='list-style:none; padding: 0;'>
+				<ul style='padding: 15px;'>
 					<li>Fear of heights</li>
 					<li>Vertigo / Dizziness</li>
 					<li>Motion Sickness</li>
@@ -42,13 +42,13 @@
 			<div class="radio">
 			  <label>
 			    <input type="radio" name="balloon_comfort" id="balloon_comfort" value="does not experience any" dependentValue="false" checked>
-			    No, I do not experience any condition
+			    No, I do not experience any of the conditions listed above
 			  </label>
 			</div>
 			<div class="radio">
 			  <label>
 			    <input type="radio" name="balloon_comfort" id="balloon_comfort" value="does experience one or more" dependentValue="true">
-			    Yes, I experience one or more condition
+			    Yes, I experience one or more of the conditions listed above
 			  </label>
 			</div>
 			<br>
@@ -65,7 +65,7 @@
 		<div class="col-sm-12"><h2>Health/Injuries</h2></div>
 		<div class="col-sm-6">
 			<p>
-				Do you have any Injuries?
+				Do you have any injuries?
 			</p>
 			<div class="radio">
 				<label>
@@ -105,7 +105,7 @@
 			</div>
 			<br	/>
 			<p>
-				If Yes, please list any food restrictions or allergies you have.
+				If Yes, please list any food allergies or dietary restrictions.
 				<br>
 			</p>
 			<textarea dependentOn="balloon_foodRestriction" name="balloon_foodRestrictionInfo" id="balloon_foodRestrictionInfo" class="form-control" rows="5" 

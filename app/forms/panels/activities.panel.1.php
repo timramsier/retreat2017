@@ -21,10 +21,10 @@
 	<br>
 	<h3>
         <em>
-            If this information is correct please click <strong>Next</strong> to continue to the <strong>Activities</strong> survey 
+            If this information is correct, please click <strong>Next</strong> to continue to the <strong>Activities</strong> survey 
             otherwise please exit this page.
             <br><br>
-            If you require assistance please reach out to Emily Somers at <a href="mailto:emily.somers@iac.com">Emily.somers@iac.com</a> 
+            If you require assistance, please reach out to Emily Somers at <a href="mailto:emily.somers@iac.com">Emily.somers@iac.com</a> 
             or (212) 314-7347.  Thanks!
         </em>
     </h3>

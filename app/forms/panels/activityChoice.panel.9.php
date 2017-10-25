@@ -26,7 +26,7 @@
       <h3>Each participant will be provided with mallets and balls.</h3>
 			<h2>Health/Injuries</h2>
 			<p>
-				Do you have any Injuries?
+				Do you have any injuries?
 			</p>
 			<div class="radio">
 				<label>

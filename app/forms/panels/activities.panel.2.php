@@ -3,8 +3,8 @@
 
 <div class="alert alert-info">
 	<h3>
-		The below activities are being offered on Thursday, December 1, 2016.  You are encouraged to 
-		select an activity that you can do with your friends and colleagues. 
+		The activities below are being offered on Thursday, November 30, 2017. You are encouraged
+		to select an activity that you can do with your friends and colleagues.
 	</h3>
  
 	<p class="text-column-2">
@@ -66,14 +66,14 @@
 		</div>			
 
 	</div>
-	<!-- <div class="col-sm-6">
+	<div class="col-sm-6">
 		<div class="alert alert-warning">
-			If weather conditions are not suitable for the activity/ies of your choosing, other activities will be offered.  
+			Please note certain activities may be cancelled due to inclement weather.
 			Thanks for your understanding.
 		</div>
 	</div>
 </div>
-<br>
+<!-- <br>
 <br>
 <h3>
 	Please let us know what time you are available to participate:
@@ -97,5 +97,5 @@
 	    <input name="afternoon" type="checkbox" value="afternoon">
 	    Afternoon (approximately 2:00 pm – 5:00 pm)
 	  </label>
-	</div> -->
-</div>
+	</div>
+</div> -->

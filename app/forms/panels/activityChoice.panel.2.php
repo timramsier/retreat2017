@@ -9,36 +9,37 @@
 
 				<h5>Required Attire:</h5>
 				<ul class="thin-text">
-					<li>Traditional Golf attire is required</li>
-					<li>For men: collared shirt, walking shorts or pants</li>
-					<li>For women: collared shirt or shirt with sleeves, walking shorts or pants</li>
-					<li>Golf shoes or tennis shoes only</li>
+					<li class="no-space">Traditional Golf attire is required</li>
+					<li class="no-space">For men: collared shirt, walking shorts or pants</li>
+					<li class="no-space">For women: collared shirt or shirt with sleeves, walking shorts or pants</li>
+					<li class="no-space">Golf shoes or tennis shoes only</li>
 				</ul>
 
 				<h5>Suggested Attire:</h5>
 				<ul class="thin-text">
-					<li>Sunglasses</li>
-					<li>Sunscreen</li>
-					<li>Hat</li>
-					<li>Bug Spray</li>
+					<li class="no-space">Sunglasses</li>
+					<li class="no-space">Golf Glove</li>
+					<li class="no-space">Sunscreen</li>
+					<li class="no-space">Hat</li>
+					<li class="no-space">Bug Spray</li>
 				</ul>
 
 				<h5>Experience Includes:</h5>
 				<ul class="thin-text">
-					<li>Shotgun start or tee times</li>
-					<li>Orientation to Hickory golf equipment and era</li>
-					<li>Full-time monitored play</li>
-					<li>Pairings (if needed)</li>
-					<li>Tournament scoring</li>
+					<li class="no-space">Shotgun start or tee times</li>
+					<li class="no-space">Orientation to Hickory golf equipment and era</li>
+					<li class="no-space">Full-time monitored play</li>
+					<li class="no-space">Pairings (if needed)</li>
+					<li class="no-space">Tournament scoring</li>
 				</ul>
 
 				<h5>Shootout Includes:</h5>
 				<ul class="thin-text">
-					<li>9 holes: shotgun start or tee times</li>
-					<li>Pairings (if needed)</li>
-					<li>Closest to he Hole contest</li>
-					<li>Tournament scoring</li>
-					<li>Bag tags for each player</li>
+					<li class="no-space">9 holes: shotgun start or tee times</li>
+					<li class="no-space">Pairings (if needed)</li>
+					<li class="no-space">Closest to the hole contest</li>
+					<li class="no-space">Tournament scoring</li>
+					<li class="no-space">Bag tags for each player</li>
 				</ul>
 
 				<h5>Transportation:</h5>
@@ -84,7 +85,7 @@
 		<div class="col-sm-6">
 			<h2>Health/Injuries</h2>
 			<p>
-				Do you have any Injuries?
+				Do you have any injuries?
 			</p>
 			<div class="radio">
 				<label>
