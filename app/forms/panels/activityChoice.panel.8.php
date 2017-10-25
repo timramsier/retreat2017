@@ -39,19 +39,17 @@
 			<br>
 			<p>What time of day do you prefer to have a spa treatment?</p>
 			<p><em>Spa Hours: Open daily 9:30am – 6:00pm</em></p>
-			<div class="checkbox-group">
-				<div class="checkbox">
-					<label>
-						<input name="spaMeadowood_morning" type="checkbox" value="yes">
-						Morning
-					</label>
-				</div>
-				<div class="checkbox">
-					<label>
-						<input name="spaMeadowood_afternoon" type="checkbox" value="yes">
-						Afternoon
-					</label>
-				</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="spaMeadowood_prefTime" id="spaMeadowood_prefTime" value="morning" checked>
+			   	Morning
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="spaMeadowood_prefTime" id="spaMeadowood_prefTime" value="afternoon" >
+			    Afternoon
+			  </label>
 			</div>
 			<div class="form-group">
 				<label for="spaMeadowood_start">What is your preferred start time?</label>
