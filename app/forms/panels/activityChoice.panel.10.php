@@ -46,7 +46,7 @@
 				<br>
 			</p>
 			<textarea dependentOn="wine_foodRestriction" name="wine_foodRestrictionInfo" id="wine_foodRestrictionInfo" class="form-control" rows="5" 
-			placeholder="Required if you said yes to food restrictions or allergies"></textarea>
+			placeholder="Required if you said yes to food allergies or dietary restrictions"></textarea>
 		</div>
 	</div>
 </div>
