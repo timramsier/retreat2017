@@ -5,7 +5,7 @@
 	<hr class='activities'>
 	<div class="row">
 		<div class="col-sm-12">
-			<h2>Equipment</h2>
+			<h2>Equipment:</h2>
 			<h3>Each participant will be provided select wines, crackers, a notepad and pen, and a tasting mat.</h3>
 			<h2>Health</h2>
 		</div>

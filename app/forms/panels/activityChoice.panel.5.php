@@ -33,7 +33,7 @@
 
 			<h3>Each participant will be provided with a horse and saddle.</h3>
 
-			<h2>Experience</h2>
+			<h2>Experience:</h2>
 			<p>
 				Have you ever been horseback riding before?
 			</p>
@@ -76,7 +76,7 @@
 	<hr class='activities'>
 	<row class="row">
 		<div class="col-sm-6">
-			<h2>Health/Injuries</h2>
+			<h2>Health/Injuries:</h2>
 			<p>
 				Do you have any injuries?
 			</p>

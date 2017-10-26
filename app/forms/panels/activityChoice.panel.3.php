@@ -42,7 +42,7 @@
 
 	<hr class='activities'>
 	<div class="row">
-		<div class="col-sm-12"><h2>Health/Injuries</h2></div>
+		<div class="col-sm-12"><h2>Health/Injuries:</h2></div>
 		<div class="col-sm-6">
 			<p>
 				Do you have any injuries?

@@ -25,7 +25,7 @@
 		<div class="col-sm-7 col-sm-pull-5">
 			<h3>Each participant will be provided hiking sticks, a water hip bag, and unlimited water.</h3>
 			<br />
-				<h2>Injuries</h2>
+				<h2>Injuries:</h2>
 				<div>
 					<p>
 						Do you have any injuries?
@@ -50,7 +50,7 @@
 					placeholder="Required if you said yes to injuries"></textarea>
 				</div>
 				<br>
-				<h2>Health</h2>
+				<h2>Health:</h2>
 				<div>
 					<p>
 						Do you have any food allergies or dietary restrictions?

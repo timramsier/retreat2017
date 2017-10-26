@@ -1,4 +1,5 @@
 <?php
+// This file contains the information on each of the reports that show up on /report
 
 // entry format: "Report Name"=>array("report"=>"query", "description"=>"string")
 $queryList = array(

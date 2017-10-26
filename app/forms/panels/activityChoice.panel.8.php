@@ -55,7 +55,7 @@
 				<label for="spaMeadowood_start">What is your preferred start time?</label>
 				<input id="spaMeadowood_start" name="spaMeadowood_start" type="text" class="form-control" placeholder="Optional">
 			</div>
-			<p>Do you have a gender preference?</p>
+			<p>Do you have a gender preference for your spa therapist?</p>
 			<div class="checkbox-group">
 				<div class="checkbox">
 					<label>
@@ -76,7 +76,7 @@
 	<hr class='activities'>
 	<div class="row">
 		<div class="col-sm-6">
-			<h2>Health/Injuries</h2>
+			<h2>Health/Injuries:</h2>
 			<p>
 				Do you have any injuries?
 			</p>

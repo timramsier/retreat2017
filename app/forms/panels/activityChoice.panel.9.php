@@ -24,7 +24,7 @@
 		</div>
 		<div class="col-sm-7 col-sm-pull-5">
       <h3>Each participant will be provided with mallets and balls.</h3>
-			<h2>Health/Injuries</h2>
+			<h2>Health/Injuries:</h2>
 			<p>
 				Do you have any injuries?
 			</p>
