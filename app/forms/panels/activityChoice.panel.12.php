@@ -7,7 +7,7 @@
 		<div class="col-sm-12">
 			<h2>Equipment:</h2>
 			<h3>Each participant will be provided with recipe cards and all of the supplies and ingredients needed.</h3>
-			<h2>Health</h2>
+			<h2>Health:</h2>
 		</div>
 		<div class="col-sm-5 col-sm-push-7">
 			<div class="alert alert-info">
